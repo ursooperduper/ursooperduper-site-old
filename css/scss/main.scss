@@ -2,16 +2,20 @@
 
 $hl-font-stack:       "bello-pro", sans-serif;
 $body-font-stack:     Helvetica, sans-serif;
-$txt-color:           #333;
 $base-font-size:      1.2em;
 $small-font-size:     0.7em;
 $base-line-height:    1.5;
-$background-color:    #fdfdfd;
-$spacing-unit:        30;
-$brand-color:         #304304; /* changeme */
-$grey-color:          #666;
-$grey-color-light:    #ccc;
+
+$background-color:    #333;
+$txt-color:           #fbfbfb;
+$brand-color:         #21bfbf;
+$grey-color:          #5d5d60;
+$grey-color-light:    #c9c9c9;
 $grey-color-dark:     #333;
+$extra-color-1:       #f2cb05;
+$extra-color-2:       #f22e2e;
+
+$spacing-unit:        30;
 
 $on-palm:             600px;
 $on-laptop:           800px;
@@ -32,7 +36,7 @@ $on-laptop:           800px;
 
 /* Resets */
 
-body, h1, h2, h3, h4, h5, h6, 
+body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
@@ -53,7 +57,7 @@ body {
 }
 
 /* Set 'margin-bottom' to maintain vertycal rhythm */
-h1, h2, h3, h4, h5, h6, 
+h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
@@ -200,16 +204,17 @@ pre {
 }
 
 .site-title {
-  font-size: 26px;
+  font: {
+    size: 26px;
+    family: $hl-font-stack;
+  }
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
 
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
+  color: $brand-color;
+
 }
 
 .site-nav {
@@ -442,7 +447,7 @@ pre {
   .m     { color: #099 } // Literal.Number
   .s     { color: #d14 } // Literal.String
   .na    { color: #008080 } // Name.Attribute
-  .nb    { color: #0086B3 } // Name.Builtin                                
+  .nb    { color: #0086B3 } // Name.Builtin
   .nc    { color: #458; font-weight: bold } // Name.Class
   .no    { color: #008080 } // Name.Constant
   .ni    { color: #800080 } // Name.Entity
