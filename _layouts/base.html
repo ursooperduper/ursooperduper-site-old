@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset='utf-8'>
+    <meta content='width=device-width' name='viewport'>
     <title>
-      Sarah K (ursooperduper)
+      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
     </title>
+    <meta content='{{ site.description }} ' name='description'>
     <link href='/css/main.css' rel='stylesheet'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'>
     <script src='//use.typekit.net/ann6kvn.js'></script>
@@ -13,6 +15,77 @@
     </script>
   </head>
   <body>
-    {{ content }}
+    <header class='site-header'>
+      <div class='wrapper'>
+        <a class='site-title' href='{{ site.baseurl }}'>
+          {{ site.title }}
+        </a>
+        <nav class='site-nav'>
+          <a class='menu-icon'>
+            <span class='fa fa-navicon'></span>
+          </a>
+          <div class='trigger'>
+            {% for page in site.pages %}
+            {% if page.title %}
+            <a class='page-link' href='{{ page.url }}'>
+              {{ page.title }}
+            </a>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class='page-content'>
+      <div class='wrapper'>
+        {{ content }}
+      </div>
+    </div>
+    <footer class='site-footer'>
+      <div class='wrapper'>
+        <h2 class='footer-heading'>
+          {{ site.title }}
+        </h2>
+        <div class='footer-col-wrapper'>
+          <div class='footer-col footer-col-1'>
+            <ul class='contact-list'>
+              <li>{{ site.title }}</li>
+              <li>
+                <a href='mailto:{{ site.email }}'>
+                  {{ site.email }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='footer-col footer-col-2'>
+            <ul class='social-media-list'>
+              {% if site.github_username %}
+              <li>
+                <a href='https://github.com/{{ site.github_username }}'>
+                  <span class='fa fa-github-square'></span>
+                  <span class='username'>
+                    {{ site.github_username }}
+                  </span>
+                </a>
+              </li>
+              {% endif %}
+              {% if site.twitter_username %}
+              <li>
+                <a href='https://twitter.com/{{ site.twitter_username }}'>
+                  <span class='fa fa-twitter-square'></span>
+                  <span class='username'>
+                    {{ site.twitter_username }}
+                  </span>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div class='footer-col footer-col-3'>
+          <p class='text'>{{ site.description }}</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

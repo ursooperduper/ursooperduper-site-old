@@ -42,5 +42,5 @@ end
 desc 'Parse all haml items'
 task haml: ['haml:layouts', 'haml:includes', 'haml:indexes']
 
-desc 'Build all haml for deployment'
+desc 'Build all haml files for deployment'
 task build: [:haml]

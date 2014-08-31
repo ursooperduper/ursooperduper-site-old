@@ -2,10 +2,15 @@
 %html
   %head
     %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width"}
+
     %title
-      Sarah K (ursooperduper)
+      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+
+    %meta{name: "description", content: "{{ site.description }} "}
     
     %link{rel: "stylesheet", href: "/css/main.css" }
+
     %link{rel: "stylesheet", href: "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" }
 
     %script{src: "//use.typekit.net/ann6kvn.js"}
@@ -13,4 +18,60 @@
       try{Typekit.load();}catch(e){}
 
   %body
-    {{ content }}
+
+    %header.site-header
+      %div.wrapper
+        %a.site-title{href: "{{ site.baseurl }}"}
+          {{ site.title }}
+
+        %nav.site-nav
+          %a.menu-icon 
+            %span.fa.fa-navicon
+          %div.trigger
+            {% for page in site.pages %}
+            {% if page.title %}
+            %a.page-link{href: "{{ page.url }}"}
+              {{ page.title }}
+            {% endif %}
+            {% endfor %}
+
+    %div.page-content
+      %div.wrapper
+        {{ content }}
+
+    %footer.site-footer
+      %div.wrapper
+        %h2.footer-heading 
+          {{ site.title }}
+        
+        %div.footer-col-wrapper
+
+          %div.footer-col.footer-col-1
+            %ul.contact-list
+              %li {{ site.title }}
+              %li
+                %a{href: "mailto:{{ site.email }}"}
+                  {{ site.email }}
+
+          %div.footer-col.footer-col-2
+            %ul.social-media-list
+              {% if site.github_username %}
+              %li
+                %a{href: "https://github.com/{{ site.github_username }}"}
+                  %span.fa.fa-github-square
+                  %span.username
+                    {{ site.github_username }}
+              {% endif %}
+
+              {% if site.twitter_username %}
+              %li
+                %a{href: "https://twitter.com/{{ site.twitter_username }}"}
+                  %span.fa.fa-twitter-square
+                  %span.username
+                    {{ site.twitter_username }}
+              {% endif %}
+
+        %div.footer-col.footer-col-3
+          %p.text {{ site.description }}
+
+

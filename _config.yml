@@ -1,2 +1,7 @@
-# Where am I? 
-timezone: America/New_York
+title: Adventures in Code
+email: sarah@sooperduper.com
+name: Sarah Kuehnle
+description: Sarah Kuehnle is attending Hacker School (F'14). This blog documents her experiences making a career change from design and product to engineering.
+baseurl: ""
+twitter_username: ursooperduper
+github_username: ursooperduper 
