@@ -49,7 +49,7 @@
         %div.footer-col-wrapper
 
           %div.footer-col.footer-col-1
-            %h3 {{ site.title }}
+            %h3.byline {{ site.title }}
             %ul.contact-list
               {% if site.github_username %}
               %li
@@ -83,4 +83,6 @@
 
 
           %div.footer-col.footer-col-2
-            %p.text {{ site.description }}
+            %p {{ site.description }}
+            %p.byline
+              If debugging this is wrong, I don't want to be right.

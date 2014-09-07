@@ -480,6 +480,17 @@ a.site-title:visited {
   font-family: $hl-font-stack;
 }
 
+.byline {
+  font: {
+    family: $hl-font-stack;
+    style: italic;
+    weight: 300;
+  }
+}
+
+p.byline {
+  font-size: 0.85em;
+}
 
 .highlight {
   background: #fff;

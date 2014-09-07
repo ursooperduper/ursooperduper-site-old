@@ -50,7 +50,7 @@
       <div class='wrapper'>
         <div class='footer-col-wrapper'>
           <div class='footer-col footer-col-1'>
-            <h3>{{ site.title }}</h3>
+            <h3 class='byline'>{{ site.title }}</h3>
             <ul class='contact-list'>
               {% if site.github_username %}
               <li>
@@ -90,7 +90,10 @@
             </ul>
           </div>
           <div class='footer-col footer-col-2'>
-            <p class='text'>{{ site.description }}</p>
+            <p>{{ site.description }}</p>
+            <p class='byline'>
+              If debugging this is wrong, I don't want to be right.
+            </p>
           </div>
         </div>
       </div>
