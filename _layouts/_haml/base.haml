@@ -30,6 +30,8 @@
             %a.menu-icon
               %span.fa.fa-navicon
             %div.trigger
+              %a.page-link{href: "/"}
+                Home
               {% for page in site.pages %}
               {% if page.title %}
               %a.page-link{href: "{{ page.url }}"}

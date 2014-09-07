@@ -9,3 +9,4 @@ dribbble_username: ursooperduper
 linkedin_username: sarahkuehnle
 exclude: ["tmux-ursoop-sess"]
 encoding: "utf-8"
+baseurl: "/"

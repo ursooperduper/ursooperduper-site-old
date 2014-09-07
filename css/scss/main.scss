@@ -210,7 +210,7 @@ pre {
 
 /* Site Header */
 .site-header {
-  min-height: 90px;
+  min-height: 100px;
   position: relative;
   background: url(../images/header-bg2.jpg) no-repeat center center;
 }
@@ -254,12 +254,12 @@ a.site-title:visited {
 
 .site-nav {
   float: right;
-  line-height: 90px;
-  margin-right: 50px;
-  margin-bottom: 4px;
+  line-height: 100px;
+  margin-right: 0px;
+  margin-bottom: 0px;
   font: {
     family: $hl-font-stack;
-    size: 1.2em;
+    size: 1.1em;
     weight: 400;
   }
   color: #fff;
@@ -270,13 +270,14 @@ a.site-title:visited {
   }
 
   .page-link {
-    color: #brand-color;
+    color: #fff;
     line-height: $base-line-height;
     vertical-align: bottom;
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
       margin-left: 20px;
     }
+    text-shadow: 2px 2px 2px $alert-color;
   }
 
   @include media-query($on-palm) {
@@ -470,6 +471,12 @@ a.site-title:visited {
   }
 }
 
+.more {
+  text-align: right;
+  font-weight: 500;
+  font-size: 1.2em;
+  font-style: italic;
+}
 
 
 .highlight {

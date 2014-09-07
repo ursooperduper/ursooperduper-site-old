@@ -121,7 +121,7 @@ pre {
 
 /* Site Header */
 .site-header {
-  min-height: 90px;
+  min-height: 100px;
   position: relative;
   background: url(../images/header-bg2.jpg) no-repeat center center; }
 
@@ -156,19 +156,20 @@ a.site-title:visited {
 
 .site-nav {
   float: right;
-  line-height: 90px;
-  margin-right: 50px;
-  margin-bottom: 4px;
+  line-height: 100px;
+  margin-right: 0px;
+  margin-bottom: 0px;
   font-family: "museo-slab", serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;
   color: #fff; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #brand-color;
+    color: #fff;
     line-height: 1.5;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    text-shadow: 2px 2px 2px #f22e2e; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
   @media screen and (max-width: 600px) {
@@ -301,6 +302,12 @@ a.site-title:visited {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+.more {
+  text-align: right;
+  font-weight: 500;
+  font-size: 1.2em;
+  font-style: italic; }
 
 .highlight {
   background: #fff; }
