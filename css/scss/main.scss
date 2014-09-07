@@ -394,6 +394,7 @@ a.site-title:visited {
   font: {
     family: $hl-font-stack;
     size: 1.2em;
+    weight: 900;
   }
 }
 
@@ -473,9 +474,10 @@ a.site-title:visited {
 
 .more {
   text-align: right;
-  font-weight: 500;
-  font-size: 1.2em;
+  font-weight: 700;
+  font-size: 1.0em;
   font-style: italic;
+  font-family: $hl-font-stack;
 }
 
 
