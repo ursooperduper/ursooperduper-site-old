@@ -8,7 +8,7 @@
       {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 
     %meta{name: "description", content: "{{ site.description }} "}
-    
+
     %link{rel: "stylesheet", href: "/css/main.css" }
 
     %link{rel: "stylesheet", href: "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" }
@@ -19,59 +19,66 @@
 
   %body
 
-    %header.site-header
-      %div.wrapper
-        %a.site-title{href: "{{ site.baseurl }}"}
-          {{ site.title }}
+    %div.site-wrapper
 
-        %nav.site-nav
-          %a.menu-icon 
-            %span.fa.fa-navicon
-          %div.trigger
-            {% for page in site.pages %}
-            {% if page.title %}
-            %a.page-link{href: "{{ page.url }}"}
-              {{ page.title }}
-            {% endif %}
-            {% endfor %}
+      %header.site-header
+        %div.wrapper
+          %a.site-title{href: "{{ site.baseurl }}" }
+            {{ site.title }}
 
-    %div.page-content
-      %div.wrapper
-        {{ content }}
+          %nav.site-nav
+            %a.menu-icon
+              %span.fa.fa-navicon
+            %div.trigger
+              {% for page in site.pages %}
+              {% if page.title %}
+              %a.page-link{href: "{{ page.url }}"}
+                {{ page.title }}
+              {% endif %}
+              {% endfor %}
+
+      %div.page-content
+        %div.wrapper
+          {{ content }}
 
     %footer.site-footer
       %div.wrapper
-        %h2.footer-heading 
-          {{ site.title }}
-        
+
         %div.footer-col-wrapper
 
           %div.footer-col.footer-col-1
+            %h3 {{ site.title }}
             %ul.contact-list
-              %li {{ site.title }}
-              %li
-                %a{href: "mailto:{{ site.email }}"}
-                  {{ site.email }}
-
-          %div.footer-col.footer-col-2
-            %ul.social-media-list
               {% if site.github_username %}
               %li
                 %a{href: "https://github.com/{{ site.github_username }}"}
-                  %span.fa.fa-github-square
-                  %span.username
-                    {{ site.github_username }}
+                  %span.fa.fa-github
               {% endif %}
 
               {% if site.twitter_username %}
               %li
                 %a{href: "https://twitter.com/{{ site.twitter_username }}"}
-                  %span.fa.fa-twitter-square
-                  %span.username
-                    {{ site.twitter_username }}
+                  %span.fa.fa-twitter
               {% endif %}
 
-        %div.footer-col.footer-col-3
-          %p.text {{ site.description }}
+              {% if site.instagram_username %}
+              %li
+                %a{href: "https://instagram.com/{{ site.instagram_username }}"}
+                  %span.fa.fa-instagram
+              {% endif %}
+
+              {% if site.dribbble_username %}
+              %li
+                %a{href: "https://dribbble.com/{{ site.dribbble_username }}"}
+                  %span.fa.fa-dribbble
+              {% endif %}
+
+              {% if site.linkedin_username %}
+              %li
+                %a{href: "https://linkedin.com/in/{{ site.linkedin_username }}"}
+                  %span.fa.fa-linkedin
+              {% endif %}
 
 
+          %div.footer-col.footer-col-2
+            %p.text {{ site.description }}

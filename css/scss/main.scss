@@ -1,21 +1,19 @@
-/* The whole shebang */
-
-$hl-font-stack:       "bello-pro", sans-serif;
+$hl-font-stack:       "museo-slab", serif;
 $body-font-stack:     Helvetica, sans-serif;
-$base-font-size:      1.2em;
-$small-font-size:     0.7em;
+$base-font-size:      0.9em;
+$small-font-size:     0.89em;
 $base-line-height:    1.5;
 
-$background-color:    #333;
-$txt-color:           #fbfbfb;
-$brand-color:         #21bfbf;
+$background-color:    #eee;
+$txt-color:           #383838;
+$brand-color:         #21bfbf; // blue
 $grey-color:          #5d5d60;
 $grey-color-light:    #c9c9c9;
 $grey-color-dark:     #333;
-$extra-color-1:       #f2cb05;
-$extra-color-2:       #f22e2e;
+$contrast-color:      #f2cb05;
+$alert-color:         #f22e2e;
 
-$spacing-unit:        30;
+$spacing-unit:        20px; // was 30px
 
 $on-palm:             600px;
 $on-laptop:           800px;
@@ -45,6 +43,11 @@ dl, dd, ol, ul, figure {
 
 /* Basics */
 
+html, body {
+  height: 100%;
+}
+
+
 body {
   font: {
     family: $body-font-stack;
@@ -54,6 +57,7 @@ body {
   line-height: $base-line-height;
   color: $txt-color;
   background-color: $background-color;
+
 }
 
 /* Set 'margin-bottom' to maintain vertycal rhythm */
@@ -102,15 +106,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links */
 a {
-  color: $brand-color;
+  color: darken($brand-color, 20%);
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 20%);
   }
 
   &:hover {
-    color: $txt-color;
+    color: darken($brand-color, 35%);
     text-decoration: underline;
   }
 }
@@ -159,7 +163,19 @@ pre {
   }
 }
 
+.site-wrapper {
+  min-height: 100%;
+  margin-bottom: -150px;
+}
 
+.site-wrapper:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .site-wrapper:after {
+  height: 150px;
+}
 
 /* Wrapper */
 .wrapper {
@@ -180,7 +196,6 @@ pre {
 }
 
 
-
 /* Clearfix */
 
 %clearfix {
@@ -195,40 +210,69 @@ pre {
 
 /* Site Header */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: 56px;
-
-  // positioning context for the mobile nav icon
+  min-height: 90px;
   position: relative;
+  background: url(../images/header-bg2.jpg) no-repeat center center;
+}
+
+a.site-title {
+  text-decoration: none;
+}
+a.site-title:hover {
+  color: $contrast-color;
+}
+
+a.site-title:visited {
+  color: $contrast-color;
 }
 
 .site-title {
   font: {
-    size: 26px;
+    size: 4.0em;
     family: $hl-font-stack;
+    weight: 900;
   }
-  line-height: 56px;
-  letter-spacing: -1px;
+  line-height: 90px;
+  vertical-align: middle;
+
   margin-bottom: 0;
   float: left;
+  padding-left: 20px;
+  color: $contrast-color;
+  text-shadow: 4px 4px 2px $alert-color;
 
-  color: $brand-color;
+  @include media-query($on-palm) {
+    font-size: 2.0em;
+    padding-left: 10px;
+  }
 
+  @include media-query($on-laptop) {
+    font-size: 2.4em;
+    padding-left: 10px;
+  }
 }
 
 .site-nav {
   float: right;
-  line-height: 56px;
+  line-height: 90px;
+  margin-right: 50px;
+  margin-bottom: 4px;
+  font: {
+    family: $hl-font-stack;
+    size: 1.2em;
+    weight: 400;
+  }
+  color: #fff;
+
 
   .menu-icon {
     display: none;
   }
 
   .page-link {
-    color: $txt-color;
+    color: #brand-color;
     line-height: $base-line-height;
-
+    vertical-align: bottom;
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
       margin-left: 20px;
@@ -237,10 +281,10 @@ pre {
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
-    right: 30px;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    top: 20px;
+    right: -40px;
+    background-color: #ccc;
+    border: 2px solid darken($brand-color, 20%);
     border-radius: 5px;
     text-align: right;
 
@@ -275,19 +319,27 @@ pre {
 
 /* Site Footer */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  width: 100%;
   padding: $spacing-unit 0;
+  background: url(../images/bottom-bg.png) no-repeat center center;
 }
 
 .footer-heading {
-  font-size: 18px;
+  font-size: 1.6em;
   margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
-.social-media-list {
+.contact-list {
   list-style: none;
   margin-left: 0;
+
+  li {
+    float: left;
+    padding-right: 10px;
+    font-size: 1.8em;
+  }
+
+  @extend %clearfix;
 }
 
 .footer-col-wrapper {
@@ -304,32 +356,23 @@ pre {
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(70% - (#{$spacing-unit} / 2));
+  width:         calc(70% - (#{$spacing-unit} / 2));
 }
 
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
   }
+
 }
 
 @include media-query($on-palm) {
@@ -343,11 +386,14 @@ pre {
 
 /* Page content */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit;
 }
 
 .page-heading {
-  font-size: 20px;
+  font: {
+    family: $hl-font-stack;
+    size: 1.2em;
+  }
 }
 
 .post-list {
@@ -366,7 +412,10 @@ pre {
 
 .post-link {
   display: block;
-  font-size: 24px;
+  font: {
+    family: $hl-font-stack;
+    size: 1.4em;
+  }
 }
 
 
@@ -376,12 +425,20 @@ pre {
 }
 
 .post-title {
-  font-size: 42px;
+  font: {
+    size: 2.6em;
+    family: $hl-font-stack;
+  }
+  color: darken($brand-color, 20%);
   letter-spacing: -1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
-    font-size: 36px;
+    font-size: 2.4em;
+  }
+
+  @include media-query($on-palm) {
+    font-size: 1.8em;
   }
 }
 
