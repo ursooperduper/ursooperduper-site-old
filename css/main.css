@@ -10,10 +10,10 @@ html, body {
   height: 100%; }
 
 body {
-  font-family: Helvetica, sans-serif;
-  font-size: 0.9em;
+  font-family: "rooney-sans", sans-serif;
+  font-size: 0.95em;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #383838;
   background-color: #eee; }
 
@@ -46,7 +46,7 @@ li > ol {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300; }
+  font-weight: 500; }
 
 /* Links */
 a {
@@ -135,7 +135,7 @@ a.site-title:visited {
   color: #f2cb05; }
 
 .site-title {
-  font-size: 4.0em;
+  font-size: 3.8em;
   font-family: "museo-slab", serif;
   font-weight: 900;
   line-height: 90px;
@@ -147,11 +147,11 @@ a.site-title:visited {
   text-shadow: 4px 4px 2px #f22e2e; }
   @media screen and (max-width: 600px) {
     .site-title {
-      font-size: 2.0em;
+      font-size: 1.0em;
       padding-left: 10px; } }
   @media screen and (max-width: 800px) {
     .site-title {
-      font-size: 2.4em;
+      font-size: 2.2em;
       padding-left: 10px; } }
 
 .site-nav {
@@ -167,7 +167,7 @@ a.site-title:visited {
     display: none; }
   .site-nav .page-link {
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.4;
     vertical-align: bottom;
     text-shadow: 2px 2px 2px #f22e2e; }
     .site-nav .page-link:not(:first-child) {
@@ -262,6 +262,7 @@ a.site-title:visited {
 
 .post-meta {
   font-size: 0.89em;
+  font-style: italic;
   color: #5d5d60; }
 
 .post-link {
@@ -289,20 +290,21 @@ a.site-title:visited {
 .post-content {
   margin-bottom: 20px; }
   .post-content h2 {
-    font-size: 32px; }
+    font-size: 1.8em;
+    font-family: "museo-slab", serif; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 28px; } }
+        font-size: 1.6em; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 1.6em; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
-        font-size: 22px; } }
+        font-size: 1.4em; } }
   .post-content h4 {
-    font-size: 20px; }
+    font-size: 1.4em; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
-        font-size: 18px; } }
+        font-size: 1.2em; } }
 
 .more {
   text-align: right;

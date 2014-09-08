@@ -1,8 +1,8 @@
 $hl-font-stack:       "museo-slab", serif;
-$body-font-stack:     Helvetica, sans-serif;
-$base-font-size:      0.9em;
+$body-font-stack:     "rooney-sans", sans-serif;
+$base-font-size:      0.95em;
 $small-font-size:     0.89em;
-$base-line-height:    1.5;
+$base-line-height:    1.4;
 
 $background-color:    #eee;
 $txt-color:           #383838;
@@ -100,7 +100,7 @@ li {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 
@@ -228,7 +228,7 @@ a.site-title:visited {
 
 .site-title {
   font: {
-    size: 4.0em;
+    size: 3.8em;
     family: $hl-font-stack;
     weight: 900;
   }
@@ -242,12 +242,12 @@ a.site-title:visited {
   text-shadow: 4px 4px 2px $alert-color;
 
   @include media-query($on-palm) {
-    font-size: 2.0em;
+    font-size: 1.0em;
     padding-left: 10px;
   }
 
   @include media-query($on-laptop) {
-    font-size: 2.4em;
+    font-size: 2.2em;
     padding-left: 10px;
   }
 }
@@ -408,8 +408,12 @@ a.site-title:visited {
 }
 
 .post-meta {
-  font-size: $small-font-size;
+  font: {
+    size: $small-font-size;
+    style: italic;
+  }
   color: $grey-color;
+
 }
 
 .post-link {
@@ -448,26 +452,29 @@ a.site-title:visited {
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 32px;
+    font: {
+      size: 1.8em;
+      family: $hl-font-stack;
+    }
 
     @include media-query($on-laptop) {
-      font-size: 28px;
+      font-size: 1.6em;
     }
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 1.6em;
 
     @include media-query($on-laptop) {
-      font-size: 22px;
+      font-size: 1.4em;
     }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 1.4em;
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      font-size: 1.2em;
     }
   }
 }
