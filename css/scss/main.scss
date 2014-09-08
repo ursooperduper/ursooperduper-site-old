@@ -243,8 +243,9 @@ a.site-title:visited {
 
   @include media-query($on-palm) {
     font-size: 1.0em;
-    padding-left: 10px;
+    padding-left: 2px;
   }
+
 
   @include media-query($on-laptop) {
     font-size: 2.2em;
@@ -264,7 +265,6 @@ a.site-title:visited {
   }
   color: #fff;
 
-
   .menu-icon {
     display: none;
   }
@@ -283,9 +283,10 @@ a.site-title:visited {
   @include media-query($on-palm) {
     position: absolute;
     top: 20px;
-    right: -40px;
+    right: 20px;
     background-color: #ccc;
-    border: 2px solid darken($brand-color, 20%);
+    /* border: 2px solid darken($alert-color, 10%);*/
+    border: 3px solid $alert-color;
     border-radius: 5px;
     text-align: right;
 
@@ -312,6 +313,8 @@ a.site-title:visited {
     .page-link {
       display: block;
       padding: 5px 10px;
+      color: darken($brand-color, 20%);
+      text-shadow: none;
     }
   }
 
