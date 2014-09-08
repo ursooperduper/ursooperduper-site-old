@@ -46,7 +46,8 @@ li > ol {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500; }
+  font-weight: 500;
+  color: #126868; }
 
 /* Links */
 a {
@@ -291,17 +292,20 @@ a.site-title:hover, a.site-title:visited {
   margin-bottom: 20px; }
   .post-content h2 {
     font-size: 1.8em;
-    font-family: "museo-slab", serif; }
+    font-family: "museo-slab", serif;
+    font-color: #126868; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 1.6em; } }
   .post-content h3 {
-    font-size: 1.6em; }
+    font-size: 1.6em;
+    color: #126868; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 1.4em; } }
   .post-content h4 {
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    color: #126868; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 1.2em; } }

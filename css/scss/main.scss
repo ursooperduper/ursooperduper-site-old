@@ -97,10 +97,10 @@ li {
   }
 }
 
-
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
+  color: darken($brand-color, 20%);
 }
 
 
@@ -450,6 +450,7 @@ a.site-title:hover, a.site-title:visited {
     font: {
       size: 1.8em;
       family: $hl-font-stack;
+      color: darken($brand-color, 20%);
     }
 
     @include media-query($on-laptop) {
@@ -459,6 +460,7 @@ a.site-title:hover, a.site-title:visited {
 
   h3 {
     font-size: 1.6em;
+    color: darken($brand-color, 20%);
 
     @include media-query($on-laptop) {
       font-size: 1.4em;
@@ -467,6 +469,7 @@ a.site-title:hover, a.site-title:visited {
 
   h4 {
     font-size: 1.4em;
+    color: darken($brand-color, 20%);
 
     @include media-query($on-laptop) {
       font-size: 1.2em;
