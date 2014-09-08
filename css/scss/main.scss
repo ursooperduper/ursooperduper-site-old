@@ -13,7 +13,7 @@ $grey-color-dark:     #333;
 $contrast-color:      #f2cb05;
 $alert-color:         #f22e2e;
 
-$spacing-unit:        20px; // was 30px
+$spacing-unit:        20px;
 
 $on-palm:             600px;
 $on-laptop:           800px;
@@ -234,7 +234,6 @@ a.site-title:visited {
   }
   line-height: 90px;
   vertical-align: middle;
-
   margin-bottom: 0;
   float: left;
   padding-left: 20px;
@@ -246,7 +245,6 @@ a.site-title:visited {
     padding-left: 2px;
   }
 
-
   @include media-query($on-laptop) {
     font-size: 2.2em;
     padding-left: 10px;
@@ -256,8 +254,10 @@ a.site-title:visited {
 .site-nav {
   float: right;
   line-height: 100px;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  margin: {
+    right: 0px;
+    bottom: 0px;
+  }
   font: {
     family: $hl-font-stack;
     size: 1.1em;
@@ -484,10 +484,12 @@ a.site-title:visited {
 
 .more {
   text-align: right;
-  font-weight: 700;
-  font-size: 1.0em;
-  font-style: italic;
-  font-family: $hl-font-stack;
+  font: {
+    weight: 700;
+    size: 1.0em;
+    style: italic;
+    family: $hl-font-stack;
+  }
 }
 
 .byline {
