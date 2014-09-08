@@ -40,7 +40,7 @@ ways of organizing work or a framework or technology.
 I love to make things.
 
 Over the past year, I've started drawing again and have been having a lot of
-fun with character design. That's lead me to experiment with creating molds to
+fun with character design. That's led me to experiment with creating molds to
 cast my own resin toys. I also enjoy experimenting generative art frameworks, like
 Processing, to create artwork.
 
