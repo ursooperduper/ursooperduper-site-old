@@ -128,10 +128,7 @@ pre {
 a.site-title {
   text-decoration: none; }
 
-a.site-title:hover {
-  color: #f2cb05; }
-
-a.site-title:visited {
+a.site-title:hover, a.site-title:visited {
   color: #f2cb05; }
 
 .site-title {
@@ -145,14 +142,14 @@ a.site-title:visited {
   padding-left: 20px;
   color: #f2cb05;
   text-shadow: 4px 4px 2px #f22e2e; }
-  @media screen and (max-width: 600px) {
-    .site-title {
-      font-size: 1.0em;
-      padding-left: 2px; } }
   @media screen and (max-width: 800px) {
     .site-title {
       font-size: 2.2em;
       padding-left: 10px; } }
+  @media screen and (max-width: 600px) {
+    .site-title {
+      font-size: 1.5em;
+      padding-left: 2px; } }
 
 .site-nav {
   float: right;
@@ -176,7 +173,7 @@ a.site-title:visited {
     .site-nav {
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 10px;
       background-color: #ccc;
       /* border: 2px solid darken($alert-color, 10%);*/
       border: 3px solid #f22e2e;

@@ -24,11 +24,9 @@ layout: base
 
     {% for post in site.posts offset: 1 limit: 10 %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y"}}</span>
-
-        <h2>
+        <p><span class="post-meta">{{ post.date | date: "%b %-d, %Y"}}</span>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }} ">{{ post.title }}</a>
-        </h2>
+        </p>
       </li>
     {% endfor %}
 

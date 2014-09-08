@@ -10,8 +10,8 @@ $brand-color:         #21bfbf; // blue
 $grey-color:          #5d5d60;
 $grey-color-light:    #c9c9c9;
 $grey-color-dark:     #333;
-$contrast-color:      #f2cb05;
-$alert-color:         #f22e2e;
+$contrast-color:      #f2cb05; // yellow
+$alert-color:         #f22e2e; // red
 
 $spacing-unit:        20px;
 
@@ -195,9 +195,7 @@ pre {
   }
 }
 
-
 /* Clearfix */
-
 %clearfix {
   &:after {
     content: "";
@@ -205,8 +203,6 @@ pre {
     clear: both;
   }
 }
-
-
 
 /* Site Header */
 .site-header {
@@ -218,11 +214,7 @@ pre {
 a.site-title {
   text-decoration: none;
 }
-a.site-title:hover {
-  color: $contrast-color;
-}
-
-a.site-title:visited {
+a.site-title:hover, a.site-title:visited {
   color: $contrast-color;
 }
 
@@ -240,14 +232,14 @@ a.site-title:visited {
   color: $contrast-color;
   text-shadow: 4px 4px 2px $alert-color;
 
-  @include media-query($on-palm) {
-    font-size: 1.0em;
-    padding-left: 2px;
-  }
-
   @include media-query($on-laptop) {
     font-size: 2.2em;
     padding-left: 10px;
+  }
+
+  @include media-query($on-palm) {
+    font-size: 1.5em;
+    padding-left: 2px;
   }
 }
 
@@ -283,7 +275,7 @@ a.site-title:visited {
   @include media-query($on-palm) {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 10px;
     background-color: #ccc;
     /* border: 2px solid darken($alert-color, 10%);*/
     border: 3px solid $alert-color;
