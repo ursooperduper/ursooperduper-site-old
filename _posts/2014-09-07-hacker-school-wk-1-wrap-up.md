@@ -34,12 +34,13 @@ After check-ins, we get down to work. For some, that means pairing or doing a co
 review. For others, that simply means hunkering back down to move our projects forward.
 
 A few highlights from week one:
-*   A talk on floating points by co-creator of [Julia](http://julialang.org/),
+
++   A talk on floating points by co-creator of [Julia](http://julialang.org/),
 [Stefan Karpinski](https://www.hackerschool.com/residents#Stefan-Karpinski). This
 pretty much blew my little mind, but I learned a lot.
-*   Thursday presentations that included syntax highlighters, natural language
+ +   Thursday presentations that included syntax highlighters, natural language
 code generators, and, visualization apps, to name a few.
-*   I finished reading the iOS Swift Programming book and had fun experimenting
+ +   I finished reading the iOS Swift Programming book and had fun experimenting
 with Swift in a Playground (more on that below).
 
 This whole thing feels like a big social experiment and I love it so far.
