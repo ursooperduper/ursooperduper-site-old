@@ -94,6 +94,12 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
+hr {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
+  margin-bottom: 20px; }
+
 .site-wrapper {
   min-height: 100%;
   margin-bottom: -150px; }

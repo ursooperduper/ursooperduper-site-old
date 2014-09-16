@@ -173,6 +173,13 @@ pre {
   }
 }
 
+hr {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
+  margin-bottom: $spacing-unit;
+}
+
 .site-wrapper {
   min-height: 100%;
   margin-bottom: -150px;
