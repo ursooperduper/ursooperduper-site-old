@@ -64,7 +64,9 @@ blockquote {
   color: #5d5d60;
   border-left: 4px solid #c9c9c9;
   padding-left: 10px;
-  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.05em;
   font-style: italic;
   letter-spacing: -1px; }
   blockquote > :last-child {
