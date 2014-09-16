@@ -57,7 +57,8 @@ a {
   color: #126868;
   text-decoration: none; }
   a:visited {
-    color: #126868; }
+    color: #126868;
+    text-decoration: none; }
   a:hover {
     color: #072727;
     text-decoration: underline; }
@@ -135,7 +136,8 @@ a.site-title {
   text-decoration: none; }
 
 a.site-title:hover, a.site-title:visited {
-  color: #f2cb05; }
+  color: #f2cb05;
+  text-decoration: none; }
 
 .site-title {
   font-size: 3.8em;
@@ -314,6 +316,8 @@ a.site-title:hover, a.site-title:visited {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 1.2em; } }
+  .post-content a, .post-content a:visited, .post-content a:hover {
+    text-decoration: underline; }
 
 .more {
   text-align: right;

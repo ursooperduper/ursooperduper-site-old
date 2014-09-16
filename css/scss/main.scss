@@ -116,6 +116,7 @@ a {
 
   &:visited {
     color: darken($brand-color, 20%);
+    text-decoration: none;
   }
 
   &:hover {
@@ -225,6 +226,7 @@ a.site-title {
 }
 a.site-title:hover, a.site-title:visited {
   color: $contrast-color;
+  text-decoration: none;
 }
 
 .site-title {
@@ -450,7 +452,10 @@ a.site-title:hover, a.site-title:visited {
   @include media-query($on-palm) {
     font-size: 1.8em;
   }
+
 }
+
+
 
 .post-content {
   margin-bottom: $spacing-unit;
@@ -483,6 +488,11 @@ a.site-title:hover, a.site-title:visited {
     @include media-query($on-laptop) {
       font-size: 1.2em;
     }
+  }
+
+  a, a:visited, a:hover {
+    text-decoration: underline;
+
   }
 }
 
