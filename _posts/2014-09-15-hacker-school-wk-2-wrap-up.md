@@ -32,21 +32,21 @@ Needless to say, I left this talk really excited about Ejecta and protyping and 
 
 ## What else happened in Week 2?
 
-More talks! One of the founders of Hacker School, Sonali Sridhar, gave an excellent talk on jobs. This focused primarily on what to expect in the job hunt process thaa for many of us, will immediately follow our time at Hacker School. In addition to getting to focus on programming for three months straight, we can also work with Hacker School facilitators, residents, and peers to prepare for the tech job hunt. This includes practice coding challenges, white boarding code, mock interviews, and resume advice.
+More talks! One of the founders of Hacker School, Sonali Sridhar, gave an excellent talk on jobs. This focused primarily on what to expect in the job hunt process that for many of us, will immediately follow our time at Hacker School. In addition to getting to focus on programming for three months straight, we can also work with Hacker School facilitators, residents, and peers to prepare for the job hunt. This includes practice coding challenges, white boarding code, mock interviews, and resume advice.
+
+## Because, Ghostbusters
+
+Another highlight of week two is that I discovered that Ghostbusters HQ is a five minute walk from the Hacker School space. The fan girl in me is still ridiculously giddy about this.
+
+![Fan girling at Ghostbusters HQ](/images/ghostbusters-hq.jpg)
 
 ## What did I accomplish this week?
 
 Work-wise, I put my basic calculator project on hold (I thought it was finished and then realized operator precedence was completely broken). I wasn't excited about tackling the problem so I decided to step away from it for a couple of days.
 
-The other reason for shelving it was I got excited about a new app idea where a user would take a picture of a friend or group of friends and using gestural input, place a cute cartoon head over a friend's head in the picture. Who doesn't want to do that?
+The other reason for shelving it was my extreme excitement about a new app idea where a user would take a picture of a friend or group of friends and using gestural input, place a cute cartoon head over a friend's head in the picture. This is an app I need on my phone right now.
 
 By the end of the week, I had the basic flow figured out and learned how to recognize gestural input. Victory! Actually saving the resulting image turned out to be much harder, so that'll come next...
-
-## Because, Ghostbusters
-
-Another highlight of week two that I have to mention is that I discovered that Ghostbusters HQ is a five minute walk from the Hacker School space. The fan girl in me is still ridiculously giddy about this.
-
-![Fan girling at Ghostbusters HQ](/images/ghostbusters-hq.jpg)
 
 ## On to week three!
 
@@ -54,4 +54,6 @@ In week three, I hope to fix the basic calculator app and post it to Github. Onc
 
 I also plan to blog about each of my app projects, covering each project's goals, ups and downs, and next steps.
 
-That's it for now. Week three, ahoy!
+That's it for now. Week three, awaits!
+
+\o/
