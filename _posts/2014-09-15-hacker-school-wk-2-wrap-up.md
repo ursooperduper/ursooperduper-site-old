@@ -6,13 +6,13 @@ date: 2014-09-15
 
 Week two, like week one, was awesome. Go figure.
 
-I felt focused, had some good projects underway and felt like I was learning a lot.
+I felt focused, had some good projects underway, and felt like I was learning a lot.
 
 ## My Week Two Super Awesome Highlight
 
 Each Monday evening at Hacker School, there are opportunities to hear people speak on a variety of topics. I was so excited to learn this week's guest was someone whose work I've admired for ages, [Amit Pitaru](http://www.pitaru.com). Amit is an interaction designer, artist and educator, who works with [Fifty Three](http://www.fiftythree.com/), makers of [Paper](http://www.fiftythree.com/paper) and [Pencil](http://www.fiftythree.com/pencil). He also collaborates frequently with [PressTube](http://presstube.com/cyclic-vacuum-cannon/), someone else I've followed since the good old days of Flash. Amit's artwork has been shown all over the world and former Flash designer/developers like me will remember being inspired by [Amit's Flash 5 work](http://pitaru.com/archives/).  
 
-For his talk, Amit talked about prototyping and how different frameworks can aid (or hinder) collaboration with designers and developers and the speed and ease of testing out  ideas and interactions. As an example, Amit used the [Ejecta](http://impactjs.com/ejecta) framework to demonstrate how he evaluates and uses the tools he works with.
+Amit talked about prototyping and how different frameworks can aid (or hinder) collaboration with designers and developers and the speed and ease of testing out  ideas and interactions. As an example, Amit used the [Ejecta](http://impactjs.com/ejecta) framework to demonstrate how he evaluates and uses the tools he works with.
 
 I hadn't heard of Ejecta before this talk, but was interested to learn it's a framework that allows you to write Javascript, Canvas, and audio and then compile it for iOS in XCode. You have access to APIs that respond to touch, the accelerometer, and localStorage. If you're building HTML5 Games, there's a good chance they'll run in iOS right out of the box with Ejecta. Oh, and it's also [open source](https://github.com/phoboslab/Ejecta).
 
@@ -41,6 +41,12 @@ Work-wise, I put my basic calculator project on hold (I thought it was finished 
 The other reason for shelving it was I got excited about a new app idea where a user would take a picture of a friend or group of friends and using gestural input, place a cute cartoon head over a friend's head in the picture. Who doesn't want to do that?
 
 By the end of the week, I had the basic flow figured out and learned how to recognize gestural input. Victory! Actually saving the resulting image turned out to be much harder, so that'll come next...
+
+## Because, Ghostbusters
+
+Another highlight of week two that I have to mention is that I discovered that Ghostbusters HQ is a five minute walk from the Hacker School space. The fan girl in me is still ridiculously giddy about this.
+
+![Fan girling at Ghostbusters HQ](/images/ghostbusters-hq.jpg)
 
 ## On to week three!
 

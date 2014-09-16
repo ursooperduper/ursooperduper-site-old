@@ -5,19 +5,18 @@ date: 2014-09-15
 ---
 
 My first iOS app is a basic calculator. I chose this as a project
-as a way to learn about XCode, basic iOS development principles, and
-to finally write some Swift code outside of a Playground.
+as a way to learn about XCode, iOS development principles and workflows, and
+to finally write some actual Swift code.
 
 Project Goals
 -------------
-A calculator app can go from simple to complex so quickly. Just turn your iOS calculator from portrait to landscape mode and marvel at the power of a more detailed camera.
+A calculator app can go from simple to complex very quickly. Just turn the iOS calculator from portrait to landscape mode and marvel at the enhanced functionality!
 
-I don't want to spend my time at Hacker School making a super-loaded, uber calculator, so I decided to keep my requirements rather simple:
+I don't want to spend my time at Hacker School making a super-loaded, uber-calculator, so I decided to keep my requirements very simple:
 
-+   Only basic math would be supported: addition, subtraction, multiplication, and division.
-+   Numbers can be positive or negative.
-+   Decimal values will be supported.
-+   The app would be built for iPhone only.
++   Only basic math will be supported: +, -, *, /
++   Numbers can be positive or negative
++   Decimal values will be supported
 
 // get a finn and jake mathematical graphic to show here
 
