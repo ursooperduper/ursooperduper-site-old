@@ -50,7 +50,7 @@ Once all the UI elements were connected to the View Controller, it was time to m
 
 As I'm new to both iOS development and Swift, two resources became immediately invaluable as I started making the calculator functional - the Xcode playground and the [Swift iBook](https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11). Working with a language that's brand new is exciting, but it means that you can't just google for answers when you're stuck! But that's also great for learning and experimentation. So the Playground in Xcode was perfect to test out code.
 
-A Playground in is an interactive workspace that allows you to write Swift code and see it's result in a live preview area right alongside the code. Every time I wonder, "Will this work?", I simply pop open the Playground to try out the idea and tweak the code before adding it to the app.
+A Playground in is an interactive workspace that allows you to write Swift code and see its result in a live preview area right alongside the code. Every time I wonder, "Will this work?", I simply pop open the Playground to try out the idea and tweak the code before adding it to the app.
 
 
 ### The Code!
@@ -66,7 +66,7 @@ Each time the user enters a digit or operator key, a function is called to updat
         doMath("*")
     }
 
-There are functions called `handleInput` and `updateDisplay` that manage converting the entered string into a decimal value and makes sure the correct number is displayed back:
+There are functions called `handleInput` and `updateDisplay` that manage converting the entered string into a decimal value and making sure the correct number is displayed back:
 
     func handleInput(str: String) {
         // Is the number entered, negative?
@@ -112,7 +112,7 @@ But then something awesome happened - some major code refactoring and learning a
 
 As I mentioned above, I was trying to manage all the calculated and user entered values using variables. Then I'd written some rather complicated logic blocks to determine what to do based on all the values of the stored variables.
 
-Enter stacks! A stack is a collection where the main (or only) operations on the collection are adding (known as 'push') and removing (known as 'pop') an item.
+Enter stacks! A stack is a collection where the main (or only) operations on the collection are adding an item (known as 'push') and removing an item (known as 'pop'). The important thing to know about stacks is that the only item you look at is the one on top, like a spring-loaded stack of plates in a cafeteria.
 
 Rather than passing a bunch of variables around, I created two stacks - one to manage digits and the other managing operations.
 
@@ -163,7 +163,7 @@ Another thing I learned about while working on this project was the power of pas
         return result
     }
 
-There are similar functions for subtraction, multiplication, and division. To make referencing and calling these functions easy, I created a hash to store the string representations of each function:
+There are similar functions for subtraction, multiplication, and division. To make referencing and calling these functions easy, I created a dictionary to store the string representations of each function:
 
     typealias Binop = (Double, Double) -> Double
     let ops: [String: Binop] = [ "+" : add, "-" : sub, "*" : mul, "/" : div ]
@@ -194,7 +194,7 @@ If you have questions or comments about this project, or have suggestions on how
 One last moment of victory!
 ---------------------------
 
-While my calculator is indeed, very basic, it does perform better than one production code calcuator. Mac users, test out my operation from above (5 + 2 * 3)
+While my calculator is indeed, very basic, it does perform better than one production code calculator. Mac users, test out my operation from above (5 + 2 * 3)
 
 The dashboard calculator will immediately add the 5 + 2 before you can even enter * 3!
 
