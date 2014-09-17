@@ -170,6 +170,10 @@ There are similar functions for subtraction, multiplication, and division. To ma
 
 Then each time a mathematic operation needs to be performed, I can simply use the operation string as a lookup for the function and run it.
 
+And here's the final product:
+
+![Basic iOS calculator UI](/images/basic-ios-calculator.png)
+
 ## Next steps
 
 With decimal, negative, positive values, and operator precedence all working as expected, I'm calling V1 of my calculator app complete! You can check out the code, here
