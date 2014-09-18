@@ -116,6 +116,7 @@ Enter stacks! A stack is a collection where the main (or only) operations on the
 
 Rather than passing a bunch of variables around, I created two stacks - one to manage digits and the other managing operations.
 
+```swift
     func doMath(newOp: String) {
         if userInput != "" && !numStack.isEmpty {
             var stackOp = opStack.last
@@ -130,6 +131,7 @@ Rather than passing a bunch of variables around, I created two stacks - one to m
         userInput = ""
         updateDisplay()
     }
+```
 
 As shown above, the function `doMath` is called whenever the user presses an operator key (+,-,*,/), which is passed in as the variable, `newOp`. Entering the function, we examine the stacks to see what values they hold, if any, and perform the mathematic operations by pushing and popping items from each stack.
 
