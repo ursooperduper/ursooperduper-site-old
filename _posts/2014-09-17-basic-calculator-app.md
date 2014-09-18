@@ -58,41 +58,45 @@ The basic functionality for the calculator app seemed pretty straight forward. T
 
 Each time the user enters a digit or operator key, a function is called to update the display and/or do some math. For example:
 
-    @IBAction func btn1Press(sender: UIButton) {
-        handleInput("1")
-    }
+{% highlight swift %}
+@IBAction func btn1Press(sender: UIButton) {
+    handleInput("1")
+}
 
-    @IBAction func btnMultiplyPress(sender: UIButton) {
-        doMath("*")
-    }
+@IBAction func btnMultiplyPress(sender: UIButton) {
+    doMath("*")
+}
+{% endhighlight %}
 
 There are functions called `handleInput` and `updateDisplay` that manage converting the entered string into a decimal value and making sure the correct number is displayed back:
 
-    func handleInput(str: String) {
-        // Is the number entered, negative?
-        if str == "-" {
-            if userInput.hasPrefix(str) {
-                // Strip off the first character (a dash)
-                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
-            } else {
-                userInput = str + userInput
-            }
+{% highlight swift %}
+func handleInput(str: String) {
+    // Is the number entered, negative?
+    if str == "-" {
+        if userInput.hasPrefix(str) {
+            // Strip off the first character (a dash)
+            userInput = userInput.substringFromIndex(userInput.startIndex.successor())
         } else {
-            userInput += str
+            userInput = str + userInput
         }
-        accumulator = Double((userInput as NSString).doubleValue)
-        updateDisplay()
+    } else {
+        userInput += str
     }
+    accumulator = Double((userInput as NSString).doubleValue)
+    updateDisplay()
+}
 
-    func updateDisplay() {
-        // If the value is an integer, don't show a decimal point
-        var iAcc = Int(accumulator)
-        if accumulator - Double(iAcc) == 0 {
-            numField.text = "\(iAcc)"
-        } else {
-            numField.text = "\(accumulator)"
-        }
+func updateDisplay() {
+    // If the value is an integer, don't show a decimal point
+    var iAcc = Int(accumulator)
+    if accumulator - Double(iAcc) == 0 {
+        numField.text = "\(iAcc)"
+    } else {
+        numField.text = "\(accumulator)"
     }
+}
+{% endhighlight %}
 
 Simple enough. Right? I thought I had a handle on everything, but my first pass at the functionality involved storing the operators entered by the user and all number digits in a couple of handfuls of variables that were buried in a deep logic flow to figure out what to do and when. And while my code was a complicated nest of if/elses, it worked - mostly.
 
@@ -116,51 +120,58 @@ Enter stacks! A stack is a collection where the main (or only) operations on the
 
 Rather than passing a bunch of variables around, I created two stacks - one to manage digits and the other managing operations.
 
-    func doMath(newOp: String) {
-        if userInput != "" && !numStack.isEmpty {
-            var stackOp = opStack.last
-            if !((stackOp == "+" || stackOp == "-") && (newOp == "*" || newOp == "/")) {
-                var oper = ops[opStack.removeLast()]
-                accumulator = oper!(numStack.removeLast(), accumulator)
-                doEquals()
-            }
+{% highlight swift %}
+func doMath(newOp: String) {
+    if userInput != "" && !numStack.isEmpty {
+        var stackOp = opStack.last
+        if !((stackOp == "+" || stackOp == "-") && (newOp == "*" || newOp == "/")) {
+            var oper = ops[opStack.removeLast()]
+            accumulator = oper!(numStack.removeLast(), accumulator)
+            doEquals()
         }
-        opStack.append(newOp)
-        numStack.append(accumulator)
-        userInput = ""
-        updateDisplay()
     }
+    opStack.append(newOp)
+    numStack.append(accumulator)
+    userInput = ""
+    updateDisplay()
+}
+{% endhighlight %}
 
 As shown above, the function `doMath` is called whenever the user presses an operator key (+,-,*,/), which is passed in as the variable, `newOp`. Entering the function, we examine the stacks to see what values they hold, if any, and perform the mathematic operations by pushing and popping items from each stack.
 
 When the user pressed the Equals button, a similar operation needs to occur, but it also needs to ensure that all the math operations in the stack are called and cleared. So the `doEquals` function will call itself recursively until the stack is clear:
 
-    func doEquals() {
-        if userInput == "" {
-            return
-        }
-        if !numStack.isEmpty {
-            var oper = ops[opStack.removeLast()]
-            accumulator = oper!(numStack.removeLast(), accumulator)
-            if !opStack.isEmpty {
-                doEquals()
-            }
-        }
-        updateDisplay()
-        userInput = ""
+{% highlight swift %}
+func doEquals() {
+    if userInput == "" {
+        return
     }
+    if !numStack.isEmpty {
+        var oper = ops[opStack.removeLast()]
+        accumulator = oper!(numStack.removeLast(), accumulator)
+        if !opStack.isEmpty {
+            doEquals()
+        }
+    }
+    updateDisplay()
+    userInput = ""
+}
+{% endhighlight %}
 
 Another thing I learned about while working on this project was the power of passing functions as variables. Each mathematic operation the calculator needs to perform can be stored as a simple function. The addition function for example, looks like this:
 
-    func add(a: Double, b: Double) -> Double {
-        var result = a + b
-        return result
-    }
-
+{% highlight swift %}
+func add(a: Double, b: Double) -> Double {
+    var result = a + b
+    return result
+}
+{% endhighlight %}
 There are similar functions for subtraction, multiplication, and division. To make referencing and calling these functions easy, I created a dictionary to store the string representations of each function:
 
+{% highlight swift %}
     typealias Binop = (Double, Double) -> Double
     let ops: [String: Binop] = [ "+" : add, "-" : sub, "*" : mul, "/" : div ]
+{% endhighlight %}
 
 Then each time a mathematic operation needs to be performed, I can simply use the operation string as a lookup for the function and run it.
 
@@ -196,4 +207,4 @@ While programming isn't be about one-upping other people's work, I'm taking this
 
 \o/
 
-*Updated* The doMath function is even DRYer now.
+*Updated* The doMath function is even DRYer now and code highlighting now works.

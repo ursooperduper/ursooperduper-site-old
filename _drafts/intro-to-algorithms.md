@@ -20,28 +20,29 @@ Here are they are:
 
 ### Ruby
 
+{% highlight ruby %}
+  num_arr = [31, 41, 59, 26, 41, 58]
+  puts "Original array:\n\t#{num_arr.join(",")}"
 
-    num_arr = [31, 41, 59, 26, 41, 58]
-    puts "Original array:\n\t#{num_arr.join(",")}"
+  def insertion_sort(arr, comp)
 
-    def insertion_sort(arr, comp)
+    (1...arr.length).each do |j|
+      key = arr[j]
+      i = j - 1
 
-      (1...arr.length).each do |j|
-        key = arr[j]
-        i = j - 1
-
-        while i >= 0 && arr[i].method(comp).call(key)
-          arr[i+1] = arr[i]
-          i = i - 1
-        end
-
-        arr[i+1] = key
+      while i >= 0 && arr[i].method(comp).call(key)
+        arr[i+1] = arr[i]
+        i = i - 1
       end
 
-      puts "Array after insertion sort:\n\t#{arr.join(",")}"
+      arr[i+1] = key
     end
 
-    insertion_sort(num_arr, ">")
+    puts "Array after insertion sort:\n\t#{arr.join(",")}"
+  end
+
+  insertion_sort(num_arr, ">")
+{% endhighlight %}
 
 
 [Gist](https://gist.github.com/ursooperduper/17f0fbe22d10d95ac5c3)
@@ -49,36 +50,38 @@ Here are they are:
 
 ### Swift
 
+{% highlight swift %}
+  typealias ArrayInt = Array<Int>
 
-    typealias ArrayInt = Array<Int>
+  func lt(a: Int, b: Int) -> Bool {
+      return a < b
+  }
+  func gt(a: Int, b: Int) -> Bool {
+      return a > b
+  }
 
-    func lt(a: Int, b: Int) -> Bool {
-        return a < b
-    }
-    func gt(a: Int, b: Int) -> Bool {
-        return a > b
-    }
+  func insertionSort(arr: ArrayInt, comp: (Int, Int) -> Bool) -> ArrayInt {
+      var key = 0
+      var j = 0
+      var i = 0
+      var new_arr = arr
 
-    func insertionSort(arr: ArrayInt, comp: (Int, Int) -> Bool) -> ArrayInt {
-        var key = 0
-        var j = 0
-        var i = 0
-        var new_arr = arr
+      for j = 1; j < new_arr.count; ++j {
+          key = new_arr[j]
+          i = j - 1
 
-        for j = 1; j < new_arr.count; ++j {
-            key = new_arr[j]
-            i = j - 1
+          while i >= 0 && comp(new_arr[i], key) {
+              new_arr[i + 1] = new_arr[i]
+              i = i - 1
+          }
+          new_arr[i + 1] = key
+      }
+      return new_arr
+  }
+  var myArr: [Int] = [31, 41, 59, 26, 41, 58]
+  insertionSort(myArr, gt)
+{% endhighlight %}
 
-            while i >= 0 && comp(new_arr[i], key) {
-                new_arr[i + 1] = new_arr[i]
-                i = i - 1
-            }
-            new_arr[i + 1] = key
-        }
-        return new_arr
-    }
-    var myArr: [Int] = [31, 41, 59, 26, 41, 58]
-    insertionSort(myArr, gt)
 
 Writing these two functions was relatively simple once I'd read the pseudocode example from the book, but making them more flexible, so you could pass either greater than or less than into the function call took me a while longer to sort out. As a new programmer, an important concept I've been learning is that it's possible to pass function calls around as parameters. Swift makes this relatively easy, provided you define the explicit types you're working with in a function.
 
