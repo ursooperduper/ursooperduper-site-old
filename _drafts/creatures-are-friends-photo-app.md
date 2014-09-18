@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Photo App: Creatures are Friends"
-date: 2014-09-16
+date: 0000-00-00
 ---
 
 In week two of Hacker School, I started my second iOS, an app that lets you take a photo of a friend and place a cartoon head over there head. Guaranteed fun.

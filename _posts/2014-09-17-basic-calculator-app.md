@@ -116,23 +116,17 @@ Enter stacks! A stack is a collection where the main (or only) operations on the
 
 Rather than passing a bunch of variables around, I created two stacks - one to manage digits and the other managing operations.
 
-
     func doMath(newOp: String) {
-        if userInput == "" || numStack.isEmpty {
-            opStack.append(newOp)
-            numStack.append(accumulator) // push
-
-        } else {
+        if userInput != "" && !numStack.isEmpty {
             var stackOp = opStack.last
             if !((stackOp == "+" || stackOp == "-") && (newOp == "*" || newOp == "/")) {
                 var oper = ops[opStack.removeLast()]
                 accumulator = oper!(numStack.removeLast(), accumulator)
-
                 doEquals()
             }
-            opStack.append(newOp)
-            numStack.append(accumulator)
         }
+        opStack.append(newOp)
+        numStack.append(accumulator)
         userInput = ""
         updateDisplay()
     }
@@ -201,3 +195,5 @@ The dashboard calculator will immediately add the 5 + 2 before you can even ente
 While programming isn't be about one-upping other people's work, I'm taking this one. My calculator is better than the OS X dashboard calculator!
 
 \o/
+
+*Updated* The doMath function is even DRYer now.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Started with Algorithms: Insertion Sort"
-date: 2014-09-11
+date: 0000-00-00
 ---
 
 This week I started reading [Introduction to Algorithms](http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen-ebook/dp/B007CNRCAO). I'm trying to work through at least a chapter of the book each week while I'm Hacker School.With no formal computer science training, it felt like it would be useful to supplement my project work with some study of algorithms.
