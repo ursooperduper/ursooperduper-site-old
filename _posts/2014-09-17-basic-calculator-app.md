@@ -169,8 +169,8 @@ func add(a: Double, b: Double) -> Double {
 There are similar functions for subtraction, multiplication, and division. To make referencing and calling these functions easy, I created a dictionary to store the string representations of each function:
 
 {% highlight swift %}
-    typealias Binop = (Double, Double) -> Double
-    let ops: [String: Binop] = [ "+" : add, "-" : sub, "*" : mul, "/" : div ]
+typealias Binop = (Double, Double) -> Double
+let ops: [String: Binop] = [ "+" : add, "-" : sub, "*" : mul, "/" : div ]
 {% endhighlight %}
 
 Then each time a mathematic operation needs to be performed, I can simply use the operation string as a lookup for the function and run it.
