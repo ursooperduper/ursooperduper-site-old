@@ -116,7 +116,7 @@ Enter stacks! A stack is a collection where the main (or only) operations on the
 
 Rather than passing a bunch of variables around, I created two stacks - one to manage digits and the other managing operations.
 
-```swift
+```Swift
     func doMath(newOp: String) {
         if userInput != "" && !numStack.isEmpty {
             var stackOp = opStack.last
