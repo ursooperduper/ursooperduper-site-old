@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "tmux Ado About Nothing"
-date: 2014-09-22
+date: 0000-00-00
 ---
 
 Of the many things I get excited about, finding new ways to speed up and organize my workflow is pretty high up on my list. Give me your keyboard shortcuts, Alfred workflows, and productivity tools! I want them all! (Seriously, send them to me. I want them.)
@@ -107,8 +107,8 @@ tmux attach -t tmux_ursoop_sess
 ```
 ## Customizing tmux
 
-You can
-The default prefix for keybinding in tmux is ctrl-b. My prefix is Ctrl-a, because you can keep your fingers on the home keys and execute quickly. You can customize this in your tmux.conf, but I'll save that for another blog post.
+You can customize tmux to make it
+The default prefix for keybinding in tmux is ctrl-b. My prefix is `, because it's out of the way and easy to reach. You can customize this in your tmux.conf, but I'll save that for another blog post.
 
 ## Learning More!
 
