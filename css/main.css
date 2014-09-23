@@ -303,6 +303,13 @@ a.site-title:hover, a.site-title:visited {
 
 .post-content {
   margin-bottom: 20px; }
+  .post-content h1 {
+    font-size: 2.0em;
+    font-family: "museo-slab", serif;
+    font-color: #126868; }
+    @media screen and (max-width: 800px) {
+      .post-content h1 {
+        font-size: 1.8em; } }
   .post-content h2 {
     font-size: 1.8em;
     font-family: "museo-slab", serif;
