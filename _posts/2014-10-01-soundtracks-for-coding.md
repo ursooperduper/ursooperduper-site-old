@@ -64,4 +64,4 @@ Are you getting ready to ship some code? Just finish work on a tricky algorithm?
 
 <iframe src="https://embed.spotify.com/?uri=spotify:user:121146772:playlist:6Xy1bI9Cl1AcDzrvbjASXO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
-Now sit down, put in your headphones, queue up one of these playlists and experience the truly epic coding experience. More playlists are on the way. Please submit score ideas and criticism in the comments below!
+Now put on your headphones, queue up one of these playlists and experience the truly epic coding experience. More playlists are on the way. Please submit score ideas and criticism in the comments below!
