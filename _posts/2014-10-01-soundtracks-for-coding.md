@@ -50,7 +50,7 @@ The Journey playlist are the montages of your programming experiences. Building 
 
 ### Scores for Melancholy/Introspection/Dark Times
 
-If you're having a rough day, just had your dream feature scrapped from the product backlog, or want to wallow a bit as your untangle ten year old PHP that you're boss' nephew wrote "in a weekend because he's a genius"? The melancholy/introspective playlist is for you. I can't promise you won't shed a tear.
+If you're having a rough day, just had your dream feature scrapped from the product backlog, or want to wallow a bit as your untangle ten year old PHP that your boss' nephew wrote "in a weekend because he's a genius"? The melancholy/introspective playlist is for you. I can't promise you won't shed a tear.
 
 **[Scores for Melancoly/Introspection](http://open.spotify.com/user/121146772/playlist/1eZrnuOD12v9uEtr6FCuEg)**
 
