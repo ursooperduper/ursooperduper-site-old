@@ -79,6 +79,12 @@ blockquote {
   blockquote > :last-child {
     margin-bottom: 0; }
 
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
+
 /* Code Formatting */
 pre, code {
   font-size: 15px;

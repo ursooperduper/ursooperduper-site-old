@@ -151,6 +151,15 @@ blockquote {
 }
 
 
+iframe {
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  margin-bottom: $spacing-unit;
+}
+
 
 /* Code Formatting */
 pre, code {
