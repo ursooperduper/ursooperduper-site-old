@@ -30,7 +30,9 @@ img {
   vertical-align: middle;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 img.sideby {
   float: left; }
@@ -311,30 +313,35 @@ a.site-title:hover, a.site-title:visited {
       font-size: 1.8em; } }
 
 .post-content {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-bottom: 40px; }
   .post-content h1 {
     font-size: 2.0em;
     font-family: "museo-slab", serif;
-    font-color: #126868; }
+    font-color: #126868;
+    margin-bottom: 0; }
     @media screen and (max-width: 800px) {
       .post-content h1 {
         font-size: 1.8em; } }
   .post-content h2 {
     font-size: 1.8em;
     font-family: "museo-slab", serif;
-    font-color: #126868; }
+    font-color: #126868;
+    padding-top: 20px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 1.6em; } }
   .post-content h3 {
-    font-size: 1.6em;
-    color: #126868; }
+    font-size: 1.4em;
+    color: #126868;
+    padding-top: 10px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 1.4em; } }
   .post-content h4 {
-    font-size: 1.4em;
-    color: #126868; }
+    font-size: 1.2em;
+    color: #126868;
+    padding-top: 10px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 1.2em; } }

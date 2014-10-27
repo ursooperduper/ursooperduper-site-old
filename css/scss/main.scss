@@ -78,6 +78,10 @@ img {
     left: auto;
     right: auto;
   }
+  padding: {
+    top: $spacing-unit / 2;
+    bottom: $spacing-unit / 2;
+  }
 }
 
 img.sideby {
@@ -128,7 +132,6 @@ a {
     text-decoration: underline;
   }
 }
-
 
 /* Blockquotes */
 blockquote {
@@ -475,10 +478,9 @@ a.site-title:hover, a.site-title:visited {
 
 }
 
-
-
 .post-content {
   margin-bottom: $spacing-unit;
+  padding-bottom: $spacing-unit * 2;
 
   h1 {
     font: {
@@ -486,6 +488,7 @@ a.site-title:hover, a.site-title:visited {
       family: $hl-font-stack;
       color: darken($brand-color, 20%)
     }
+    margin-bottom: 0;
 
     @include media-query($on-laptop) {
       font-size: 1.8em;
@@ -498,6 +501,7 @@ a.site-title:hover, a.site-title:visited {
       family: $hl-font-stack;
       color: darken($brand-color, 20%);
     }
+    padding-top: $spacing-unit;
 
     @include media-query($on-laptop) {
       font-size: 1.6em;
@@ -505,8 +509,9 @@ a.site-title:hover, a.site-title:visited {
   }
 
   h3 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: darken($brand-color, 20%);
+    padding-top: $spacing-unit / 2;
 
     @include media-query($on-laptop) {
       font-size: 1.4em;
@@ -514,8 +519,9 @@ a.site-title:hover, a.site-title:visited {
   }
 
   h4 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: darken($brand-color, 20%);
+    padding-top: $spacing-unit / 2;
 
     @include media-query($on-laptop) {
       font-size: 1.2em;
