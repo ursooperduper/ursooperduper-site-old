@@ -22,7 +22,9 @@ The first step to creating a Twitter bot is creating a [new Twitter account](htt
 
 I recommend not creating lots of dummy email addresses each time you want to create a new bot. It's a hassle tracking all those email addresses and there's a much easier way. Instead, you can easily add a modifier to your existing email address. 
 
-For example, if your email address is `llama@zoo.com`, you can use the address, `llama+twitterbot@zoo.com`. The addition of the `+` modifier to your existing email will look like a unique address to Twitter. 
+For example, if your email address is `llama@gmail.com`, you can use the address, `llama+twitterbot@gmail.com`. The addition of the `+` modifier to your existing email will look like a unique address to Twitter. 
+
+(Update 2014-10-28: *It was pointed out to me that the above +modifier approach only works for Gmail accounts. So if you don't use Gmail, you'll need to create new, unique, email addresses.*)
 
 Once you've chosen a handle and email address for your bot in the Twitter sign-up process, you'll receive an email asking you to verify your account. Follow the link in the email you receive to get that step out of the way. It'll matter when you want to sign up for Twitter API keys.
 
@@ -133,3 +135,5 @@ npm install wordfilter --save
 ## Ready for part two - Twitter bot coding fun!
 
 At this point, you've set up all the essentials tools you'll need to create your own Twitter bot. In the next post, I'll review the code for my own Twitter bot, [@PickTwoBot](https://twitter.com/picktwobot), so you can see how I coded my own Twitter bot.
+
+*Updated: 2014-10-28 - Regarding email modifiers only being available via Gmail.*
