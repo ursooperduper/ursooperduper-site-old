@@ -214,6 +214,8 @@ postTweet = function(botData, cb) {
 
 If that's successful, we're done and the masses will either marvel or puzzle at the tweet we've just posted!
 
+All the [code for my Twitter bot can be found on Github](https://github.com/ursooperduper/picktwobot)! If you have any questions about it or suggestions for how to improve it, please let me know in the comments below!
+
 ## A few thoughts...
 
 I'm pretty happy with the code for this bot, but a few improvements could (and should) be made: 
