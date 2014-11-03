@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Creating a Twitter bot with Node.js: Part 3 - Deploying your Twitter bot"
-date: 2014-10-30
+date: 2014-11-03
 ---
 
-Thanks for all the great feedback on my [last blog post, reviewing the code for my Twitter bot]({{ site.url }}/2014/10/28/twitter-bot-with-node-js-part-2.html)! I'll be sure to include more code deep dives in future posts. In this, the third and final post in the series on creating a Twitter bot, I'll share how I deployed my Twitter bot.
+Thanks for all the great feedback on my [last blog post, reviewing the code for my Twitter bot]({{ site.url }}/2014/10/28/twitter-bot-with-node-js-part-2.html). I'll be sure to include more code deep dives in future posts. In this, the third and final post in the series on creating a Twitter bot, I'll share how I deployed my Twitter bot.
 
-Figuring out how to deploy the bot took several attempts because there are so many ways to accomplish this. As first, I added a tiny Node-based web framework to my bot, which allowed me to call a URL that triggered the bot's main loop. To automate the URL being requested, I used an uptime-reporting site to ping the bot's URL once an hour. But finding free hosting for a node app that wouldn't automatically shut down or go idle after an hour was tricky, so I abandoned this approach. 
+Figuring out how to deploy a bot took several attempts because there are so many ways to do it. As first, I added a tiny Node-based web framework to my bot, which allowed me to call a URL that triggered the bot's main loop. To automate the URL being requested, I used an uptime-reporting site to ping the bot's URL once an hour. But finding free hosting for a node app that wouldn't automatically shut down or go idle after an hour was tricky, so I abandoned this approach. 
 
 Luckily, I found a much easier way to host my bot, which is both free and simple to set up.
 
