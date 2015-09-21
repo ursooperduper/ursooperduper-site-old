@@ -14,6 +14,7 @@ $contrast-color:      #f2cb05; // yellow
 $alert-color:         #f22e2e; // red
 
 $spacing-unit:        20px;
+$spacing-unit-sm:     10px;
 
 $on-palm:             600px;
 $on-laptop:           800px;
@@ -432,7 +433,7 @@ a.site-title:hover, a.site-title:visited {
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit-sm;
   }
 }
 
@@ -449,7 +450,7 @@ a.site-title:hover, a.site-title:visited {
   display: block;
   font: {
     family: $hl-font-stack;
-    size: 1.4em;
+    size: 1em;
   }
 }
 

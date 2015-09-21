@@ -2,7 +2,7 @@
 layout: base
 ---
 
-  <h2 class="page-heading">Latest Posts</h1>
+  <h2 class="page-heading">Latest Post</h1>
 
   {% for post in site.posts limit:1 %}
 
@@ -21,13 +21,13 @@ layout: base
 
 <hr>
 
-  <h2 class="page-heading">Recent Posts</h2>
+  <h2 class="page-heading">All Posts</h2>
   <ul class="post-list">
 
-    {% for post in site.posts offset: 1 limit: 10 %}
+    {% for post in site.posts offset: 1 %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y"}}</span>
-          <a class="post-link" href="{{ post.url }} ">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url }} ">{{ post.title }}</a>
       </li>
     {% endfor %}
 

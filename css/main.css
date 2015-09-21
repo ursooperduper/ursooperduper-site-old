@@ -283,7 +283,7 @@ a.site-title:hover, a.site-title:visited {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
 
 .post-meta {
   font-size: 0.89em;
@@ -293,7 +293,7 @@ a.site-title:hover, a.site-title:visited {
 .post-link {
   display: block;
   font-family: "museo-slab", serif;
-  font-size: 1.4em; }
+  font-size: 1em; }
 
 /* Posts */
 .post-header {
