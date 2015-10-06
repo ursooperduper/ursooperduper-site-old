@@ -1,7 +1,7 @@
 title: "// this might work..."
 email: sarah@sooperduper.com
 name: "Sarah Kuehnle"
-description: "Sarah Kuehnle is generalist who loves front-end development and product design. This blog details her experiences making a career change from product management to design and engineering."
+description: "Sarah Kuehnle is generalist interested in front-end and mobile development, product design, and you."
 url: http://ursooperduper.github.io
 twitter_username: ursooperduper
 github_username: ursooperduper
@@ -15,5 +15,5 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: pygments
-lsi:         false
+lsi: false
 excerpt_separator: "\n\n"
