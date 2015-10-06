@@ -1,0 +1,6 @@
+<dl class='project-meta'>
+  {% for detail in site.data.work.meta[include.proj] %}
+  <dt>{{ detail.item }}:</dt>
+  <dd>{{ detail.desc }}</dd>
+  {% endfor %}
+</dl>

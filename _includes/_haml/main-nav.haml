@@ -1,0 +1,5 @@
+{% for item in site.data.navbar %}
+{% if item.name %}
+%a.page-link{href: "{{ item.url }}"} {{ item.name }}
+{% endif %}
+{% endfor %}

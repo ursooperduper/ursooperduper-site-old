@@ -1,0 +1,25 @@
+---
+layout: page
+title: Work Samples
+---
+<div class='work'>
+  {% for work in site.data.work-projects %}
+  <div class='work-thumb'>
+    <a href='/work/{{ work.url }}'>
+      <img src='/images/work/thumbs/{{ work.thumb }}'>
+      {{ work.title }}
+    </a>
+  </div>
+  {% endfor %}
+</div>
+<h3>Personal Projects</h3>
+<div class='work'>
+  {% for per in site.data.personal-projects %}
+  <div class='work-thumb'>
+    <a href='/work/{{ per.url }}'>
+      <img src='/images/work/thumbs/{{ per.thumb }}'>
+      {{ per.title }}
+    </a>
+  </div>
+  {% endfor %}
+</div>

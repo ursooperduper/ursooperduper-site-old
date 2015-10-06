@@ -1,0 +1,24 @@
+\---
+layout: page
+title: Hands of Humanity
+data: hoh
+\---
+
+{% include project-meta.html proj=page.data %}
+
+{% include project-gallery.html proj=page.data %}
+
+%p<
+  As a huge fan of the card game,
+  %a{ href: "https://cardsagainsthumanity.com/", target: "_blank" } Cards Against Humanity,
+  I wanted an easy way to show friends what a typical hand in the game might look like. So I built a database of all the cards in the game and then created a simple app that draws a black card and the necessary number of white cards to show what the ahnd might look like.
+
+%p< It was fun building this because I was able to easily duplicate the look of the real cards. In the future, I'd like to experiment with creating an online version of the card game with a custom card creator.
+
+%p<
+  %a{ href: "http://hands-of-humanity.herokuapp.com/", target: "_blank" } Visit Hands Against Humanity web page (refresh for a new hand!)
+
+%p.return-to<
+  %a{ href: "/work/index.html"} Return to Work Samples
+
+%script{src: "/scripts/gallery.js", type: "text/javascript"}

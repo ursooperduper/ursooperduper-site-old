@@ -1,0 +1,5 @@
+%dl.project-meta
+  {% for detail in site.data.work.meta[include.proj] %}
+  %dt< {{ detail.item }}:
+  %dd< {{ detail.desc }}
+  {% endfor %}

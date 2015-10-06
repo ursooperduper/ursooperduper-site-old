@@ -1,0 +1,47 @@
+\---
+layout: page
+title: Pick Two Bot
+data: pick-two-bot
+\---
+
+{% include project-meta.html proj=page.data %}
+
+%p<
+  Inspired by the bots created by Internet artist,
+  %a{ href: "http://tinysubversions.com/projects/", target: "_blank" } Darius Kazemi
+  , I wanted to learn about building and deploying Twitter bots.
+
+%p< Pick Two Bot, my first bot, is based on the project management triangle: "good, fast, cheap: pick two". The bot queries Twitter for a random recent tweet that includes three nouns and reformats them in the following way: "{noun}. {noun}. {noun}. Pick two." Below is an example.
+
+%img{ src: "/images/work/bots/pick-two-bot.jpg", alt: "Tweet: Bacon. Cheeseburger. Love. Pick two." }
+
+%p<
+  The bot uses the
+  %a{ href: "http://developer.wordnik.com", target: "_blank" } Worknik API
+  to identify the parts of speech in a given tweet and then formats them in the singular form.
+
+%p<
+  The bot runs as a
+  %a{ href: "https://nodejs.org", target: "_blank" }Node.js
+  app as a worker on
+  %a{ href: "https://heroku.com", target: "_blank" }Heroku
+  and fails silently if it doesn't find a Tweet with 3 nouns. It just tries again in the next time interval.
+
+%p< To learn more about how the bot was created, see my three-part blog series on creating a Twitter bot:
+
+%ul
+  %li<
+    %a{ href: "/2014/10/27/twitter-bot-with-node-js-part-1.html" } Creating a Twitter bot with Node.js: Part 1 - Setting up
+  %li<
+    %a{ href: "/2014/10/28/twitter-bot-with-node-js-part-2.html" } Creating a Twitter bot with Node.js: Part 2 - Writing the code
+  %li<
+    %a{ href: "/2014/11/03/twitter-bot-with-node-js-part-3.html" } Creating a Twitter bot with Node.js: Part 3 - Deploying your Twitter bot
+
+%p<
+  %a{ href: "https://twitter.com/picktwobot", target: "_blank" } Follow the bot on Twitter!
+
+%p<
+  %a{ href: "https://github.com/ursooperduper/picktwobot", target: "_blank" } Check out the code in this project's Github repository
+
+%p<
+  %a.return-to{ href: "/work/index.html"} Return to Work Samples

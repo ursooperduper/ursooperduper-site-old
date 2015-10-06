@@ -1,0 +1,23 @@
+\---
+layout: page
+title: Creatures Are Friends
+data: caf
+\---
+
+{% include project-meta.html proj=page.data %}
+
+%img.side-img{ src: "/images/work/caf/caf.jpg" }
+
+%p< To learn more about the Photos Framework in OS, I wanted to create an app that would let you take a photo of a friend and replace their head with a cartoon one.
+
+%p< In addition to learning how to access a user's photo library, create new collections, and save photos to that new collection, I had to figure out how to take an asset - in this case a cartoon head - and merge with the selected photo, saving the resulting image. Doing that turned out to be a huge challenge. It's easy to save photos, but the resulting image never looked like the image created in the app. The cartoon head was always in the wrong place or the wrong size and orientation. Fixing this problem meant learning all about affine transformations.
+
+%p<
+  I shared how I solved my image creation issues and more about affine transformations in a
+  %a{ href: "/2014/09/30/affine-day-for-a-transformation.html" } blog post.
+
+%p<
+  %a{ href: "https://github.com/ursooperduper/creatures-are-friends", target: "_blank" } Check out the code in this project's Github repository
+
+%p.return-to<
+  %a{ href: "/work/index.html"} Return to Work Samples

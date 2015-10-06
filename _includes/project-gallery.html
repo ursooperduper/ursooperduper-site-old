@@ -1,0 +1,8 @@
+<div class='lightbox'>
+  <ul>
+    {% for work in site.data.work.galleries[include.proj] %}
+    <li><img alt='{{ work.title }}' datalg='{{ work.img-lg }}' datamd='{{ work.img-md }}' dataml='{{ work.img-ml }}' src='{{ work.img-sm }}'>
+    <div class='image-title'><div class='title'>{{ work.title }}</div></div></li>
+    {% endfor %}
+  </ul>
+</div>

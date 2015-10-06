@@ -1,0 +1,8 @@
+.lightbox
+  %ul
+    {% for work in site.data.work.galleries[include.proj] %}
+    %li<
+      %img{ src: "{{ work.img-sm }}", datalg: "{{ work.img-lg }}", dataml: "{{ work.img-ml }}", datamd: "{{ work.img-md }}", alt: "{{ work.title }}" }
+      .image-title<
+        .title {{ work.title }}
+    {% endfor %}

@@ -1,0 +1,46 @@
+\---
+layout: page
+title: A Tale of Two Tweets Bot
+data: tale-bot
+\---
+
+{% include project-meta.html proj=page.data %}
+
+%p< My second Twitter bot, A Tale of Two Tweets, was created to explore the WorkNik API a little more. The bot is based on Charles Dickens' work, A Tale of Two Cities, opening quote, "It was the best of times, it was the worst of times."
+
+%p< The bot grabs two recent publics Tweets; one that includes the word "best" and the other including the word "worst". It then looks for the word that follows "best" or "worst" and checks to see if those words are nouns. If they are, the plural form of words is used in the following format: "It was the best of {noun}. It was the worst of {noun}."
+
+%p< Sometimes the results don't make any sense, which is part of the fun of creating these bots. Other times the bots returns hilarious results, as shown below.
+
+%img{ src: "/images/work/bots/tale-of-two-tweets.jpg", alt: "Tweet: It was the best of teams, it was the worst of divisions." }
+
+%p<
+  The bot uses the
+  %a{ href: "http://developer.wordnik.com", target: "_blank" } Worknik API
+  to identify the parts of speech in a given tweet and then formats them in the singular form.
+
+%p<
+  The bot runs as a
+  %a{ href: "https://nodejs.org", target: "_blank" } Node.js
+  app as a worker on
+  %a{ href: "https://heroku.com", target: "_blank" } Heroku
+  and fails silently if it doesn't find Tweets of the correct format. It just tries again in the next time interval.
+
+%p< To learn more about how the bot was created, see my three-part blog series on creating a Twitter bot:
+
+%ul
+  %li<
+    %a{ href: "/2014/10/27/twitter-bot-with-node-js-part-1.html" } Creating a Twitter bot with Node.js: Part 1 - Setting up
+  %li<
+    %a{ href: "/2014/10/28/twitter-bot-with-node-js-part-2.html" } Creating a Twitter bot with Node.js: Part 2 - Writing the code
+  %li<
+    %a{ href: "/2014/11/03/twitter-bot-with-node-js-part-3.html" } Creating a Twitter bot with Node.js: Part 3 - Deploying your Twitter bot
+
+%p<
+  %a{ href: "https://twitter.com/taleoftwotweets", target: "_blank" } Follow the bot on Twitter!
+
+%p<
+  %a{ href: "https://github.com/ursooperduper/taleoftwotweets", target: "_blank" } Check out the code in this project's Github repository
+
+%p.return-to<
+  %a{ href: "/work/index.html"} Return to Work Samples
