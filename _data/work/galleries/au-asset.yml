@@ -1,0 +1,17 @@
+- img-lg: "/images/work/au/au-01-450.jpg"
+  img-ml: "/images/work/au/au-01-300.jpg"
+  img-md: "/images/work/au/au-01-300.jpg"
+  img-sm: "/images/work/au/au-01-200.jpg"
+  title: "Admin main menu"
+
+- img-lg: "/images/work/au/au-02-450.jpg"
+  img-ml: "/images/work/au/au-02-300.jpg"
+  img-md: "/images/work/au/au-02-300.jpg"
+  img-sm: "/images/work/au/au-02-200.jpg"
+  title: "Asset preview & download"
+
+- img-lg: "/images/work/au/au-03-450.jpg"
+  img-ml: "/images/work/au/au-03-300.jpg"
+  img-md: "/images/work/au/au-03-300.jpg"
+  img-sm: "/images/work/au/au-03-200.jpg"
+  title: "Video asset preview"

@@ -1,0 +1,11 @@
+- img-lg: "/images/work/dd/dd-01-700.jpg"
+  img-ml: "/images/work/dd/dd-01-500.jpg"
+  img-md: "/images/work/dd/dd-01-300.jpg"
+  img-sm: "/images/work/dd/dd-01-200.jpg"
+  title: "Main screen"
+
+- img-lg: "/images/work/dd/dd-02-700.jpg"
+  img-ml: "/images/work/dd/dd-02-500.jpg"
+  img-md: "/images/work/dd/dd-02-300.jpg"
+  img-sm: "/images/work/dd/dd-02-200.jpg"
+  title: "Various screens"

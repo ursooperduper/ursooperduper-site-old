@@ -1,0 +1,17 @@
+- img-lg: "/images/work/ss/strava-segment-hawk-hill-700.jpg"
+  img-ml: "/images/work/ss/strava-segment-hawk-hill-500.jpg"
+  img-md: "/images/work/ss/strava-segment-hawk-hill-300.jpg"
+  img-sm: "/images/work/ss/strava-segment-hawk-hill-200.jpg"
+  title: "Segment page"
+
+- img-lg: "/images/work/ss/strava-segment-search-700.jpg"
+  img-ml: "/images/work/ss/strava-segment-search-500.jpg"
+  img-md: "/images/work/ss/strava-segment-search-300.jpg"
+  img-sm: "/images/work/ss/strava-segment-search-200.jpg"
+  title: "Segment search"
+
+- img-lg: "/images/work/ss/strava-segments-starred-700.jpg"
+  img-ml: "/images/work/ss/strava-segments-starred-500.jpg"
+  img-md: "/images/work/ss/strava-segments-starred-300.jpg"
+  img-sm: "/images/work/ss/strava-segments-starred-200.jpg"
+  title: "My Segments page"
