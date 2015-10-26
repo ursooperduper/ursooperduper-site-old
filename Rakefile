@@ -28,13 +28,22 @@ namespace :haml do
 		puts 'Parsed haml include files'
 	end
 
-	desc 'Parse haml index files'
+	desc 'Parse haml index file'
 	task :index do
 		Dir.glob('**/index.haml') do |path|
 			convert path, File.dirname(path)
 		end
 
-		puts 'Parsed haml index files'
+		puts 'Parsed haml index file'
+	end
+
+	desc 'Parse tag file'
+	task :tag do
+		Dir.glob('tags/_haml/*.haml') do |path|
+			convert path, 'tags'
+		end
+
+		puts 'Parsed haml tag file'
 	end
 
 	desc 'Parse work project files'
@@ -44,6 +53,15 @@ namespace :haml do
 		end
 
 		puts 'Parsed haml work files'
+	end
+
+	desc 'Parse archive file'
+	task :archive do
+		Dir.glob('archive/_haml/*.haml') do |path|
+			convert path, 'archive'
+		end
+
+		puts 'Parsed haml archive file'
 	end
 end
 
