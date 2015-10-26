@@ -8,12 +8,13 @@ then
 
   tmux split-window -h -t blog:1.1
   tmux send-keys -t blog:1.2 'cd ~/Dropbox/code/ursooperduper.github.io' C-m
-  tmux send-keys -t blog:1.2 'ls' C-m
   tmux send-keys -t blog:1.2 'atom .' C-m
+  tmux send-keys -t blog:1.2 'cl' C-m
+  tmux send-keys -t blog:1.2 'ls' C-m
 
   tmux split-window -v -t blog:1.1 -d
   tmux send-keys -t blog:1.3 'cd ~/Dropbox/code/ursooperduper.github.io' C-m
-  tmux send-keys -t blog:1.3 'sass --watch css/scss:css' C-m
+  tmux send-keys -t blog:1.3 'gulp' C-m
 fi
 
 tmux attach -t blog
