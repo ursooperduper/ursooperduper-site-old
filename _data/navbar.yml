@@ -6,3 +6,6 @@
 
 - name: "Work Samples"
   url: "/work"
+
+- name: "Post Archive"
+  url: "/archive"

@@ -1,0 +1,25 @@
+\---
+layout: page
+title: Post Archive
+\---
+
+.l-site-detail
+  .post-list
+    / All Posts sections
+    %h2<= "All Posts"
+
+    %ul
+      {% for post in site.posts %}
+      %li
+        .post-meta<
+          {{ post.date | date: "%b %-d, %Y" }}
+
+        %a{href: "{{ post.url }}"}<
+          {{ post.title }}
+      {% endfor %}
+
+  .side-bar
+    // Post tags
+    %h2<= "Tags"
+
+    {% include tags.html %}
