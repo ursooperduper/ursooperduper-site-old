@@ -10,13 +10,22 @@ layout: base
 <p class='more'><a href='{{ post.url }}'>Read more</a></p>
 {% endfor %}
 <hr>
-<!-- All Posts sections -->
-<h2 class='section-heading'>All Posts</h2>
-<ul class='post-list'>
-  {% for post in site.posts offset: 1 %}
-  <li>
-    <div class='post-meta'>{{ post.date | date: "%b %-d, %Y"}}</div>
-    <a href='{{ post.url }}'>{{ post.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+<div class='l-site-detail'>
+  <div class='post-list'>
+    <!-- All Posts sections -->
+    <h2 class='section-heading'>Recent Posts</h2>
+    <ul>
+      {% for post in site.posts offset:1 limit:3 %}
+      <li>
+        <div class='post-meta'>{{ post.date | date: "%b %-d, %Y" }}</div>
+        <a href='{{ post.url }}'>{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class='side-bar'>
+    <!-- / Post tags -->
+    <h2 class='section-heading'>Tags</h2>
+    {% include tags.html %}
+  </div>
+</div>

@@ -19,18 +19,24 @@ layout: base
 
 %hr
 
-/ All Posts sections
-%h2.section-heading<= "All Posts"
+.l-site-detail
+  .post-list
+    / All Posts sections
+    %h2.section-heading<= "Recent Posts"
 
-%ul.post-list
+    %ul
 
-  {% for post in site.posts offset: 1 %}
-  %li
+      {% for post in site.posts offset:1 limit:3 %}
+      %li
+        .post-meta<
+          {{ post.date | date: "%b %-d, %Y" }}
 
-    .post-meta<
-      {{ post.date | date: "%b %-d, %Y"}}
+        %a{href: "{{ post.url }}"}<
+          {{ post.title }}
+      {% endfor %}
 
-    %a{href: "{{ post.url }}" }<
-      {{ post.title }}
+  .side-bar
+    // Post tags
+    %h2.section-heading<= "Tags"
 
-  {% endfor %}
+    {% include tags.html %}

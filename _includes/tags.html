@@ -1,0 +1,7 @@
+<div class='tags'>
+  {% assign sortedTags = site.tags | sort %}
+  {% for t in sortedTags %}
+  {% assign tag = t | first %}
+  <div class='tag'><a href="/tags/{{ tag | downcase | replace:' ','-'}}">{{ tag }}</a></div>
+  {% endfor %}
+</div>
