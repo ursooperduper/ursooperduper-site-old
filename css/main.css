@@ -155,6 +155,15 @@ hr {
   .l-footer-col-2 {
     padding-top: 10px; } }
 
+.l-site-detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
 .site-header {
   height: 100px;
   background: url("../images/header-bg2.jpg") no-repeat center center; }
@@ -238,6 +247,9 @@ hr {
   .page-link:not(:first-child) {
     margin-left: 20px; }
 
+.page-link:hover {
+  text-decoration: none; }
+
 .site-footer {
   width: 100%;
   height: 100px;
@@ -264,9 +276,13 @@ hr {
   font-weight: 900; }
 
 .post-list {
+  width: 70%;
   margin-left: 0;
-  list-style: none; }
-  .post-list > li {
+  padding-right: 20px; }
+  .post-list ul {
+    margin-left: 0;
+    list-style: none; }
+  .post-list li {
     margin-bottom: 10px; }
 
 .post-meta {
@@ -277,15 +293,17 @@ hr {
 .post-title {
   color: #126868;
   font-family: "museo-slab", serif;
-  font-size: 2.6em;
+  font-size: 2em;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (max-width: 800px) {
     .post-title {
-      font-size: 2.4em; } }
+      font-size: 2.2em; } }
   @media screen and (max-width: 600px) {
     .post-title {
       font-size: 1.8em; } }
+  .post-title a:hover {
+    text-decoration: none; }
 
 .excerpt {
   margin-bottom: 20px; }
@@ -304,7 +322,7 @@ hr {
         font-size: 1.8em; } }
   .post-content h2 {
     padding-top: 20px;
-    font-size: 1.8em; }
+    font-size: 1.6em; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 1.6em; } }
@@ -517,5 +535,39 @@ hr {
 
 .return-to {
   padding-top: 40px; }
+
+.side-bar {
+  width: 30%; }
+
+.tags {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.tag {
+  font-size: .8em; }
+  .tag a {
+    display: block;
+    margin: 4px;
+    padding: 2px 4px;
+    border: 1px solid #21bfbf;
+    border-radius: 4px;
+    background-color: #c9c9c9;
+    text-decoration: none; }
+  .tag a:hover {
+    background-color: #fff; }
+
+.tag-list {
+  margin-bottom: 40px; }
+  .tag-list ul {
+    margin-left: 0;
+    list-style: none; }
+  .tag-list .post-meta {
+    padding-left: 20px; }
 
 /*# sourceMappingURL=main.css.map */
