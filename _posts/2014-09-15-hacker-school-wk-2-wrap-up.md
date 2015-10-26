@@ -2,6 +2,10 @@
 layout: post
 title: "Hacker School: Week Two Wrap-up"
 date: 2014-09-15
+tags:
+- Recurse Center
+- education
+- life
 ---
 
 Week two, like week one, was awesome. Go figure. I was focused, had some good projects underway, and felt like I was learning a lot.

@@ -2,9 +2,15 @@
 layout: post
 title: "Building a Basic Calculator App for iOS"
 date: 2014-09-17
+tags:
+- iOS
+- Swift
+- Xcode
+- mobile
+- projects
 ---
 
-My first iOS app is a basic calculator. I chose this  project as a way to learn about XCode, iOS development principles and workflows, and to finally write some actual Swift code.
+My first iOS app is a basic calculator. I chose this  project as a way to learn about Xcode, iOS development principles and workflows, and to finally write some actual Swift code.
 
 ![Get mathematical!](/images/mathematical.gif)
 
@@ -16,7 +22,7 @@ A calculator app can go from simple to complex very quickly. Just turn the iOS c
 
 I don't want to spend my time at Hacker School making a super-loaded, uber-calculator, so I decided to keep my requirements very simple:
 
-+   Only basic math will be supported: +, -, *, /
++   Only basic math will be supported: +, -, \*, /
 +   Numbers can be positive or negative.
 +   Decimal values will also be supported.
 

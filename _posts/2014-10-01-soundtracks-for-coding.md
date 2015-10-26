@@ -2,6 +2,10 @@
 layout: post
 title: "Soundtracks for Coding"
 date: 2014-10-01
+tags:
+- music
+- productivity
+- Spotify
 ---
 
 You know the feeling when you're completely absorbed in a movie?

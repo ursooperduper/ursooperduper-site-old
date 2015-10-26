@@ -2,13 +2,22 @@
 layout: post
 title: "Creating a Twitter bot with Node.js: Part 2 - Writing the code"
 date: 2014-10-28
+tags:
+- Twitter
+- bots
+- projects
+- Node.js
+- API
+- Wordnik
+- JavaScript
+- tutorials
 ---
 
 In the [first post in this series]({{ site.url }}/2014/10/27/twitter-bot-with-node-js-part-1.html), I covered how to set up a Twitter account, get API keys, and install Node.js and a few great modules that will help you create a Twitter bot. In this second post, I'll step through the code for my first Twitter bot, [@PickTwoBot](https://twitter.com/picktwobot), so you can see how easy it is to spout prolific nothings at the Twitterverse.
 
 ![Prolific.](/images/dicaprio-crowd.gif)
 
-To recap, my Twitter bot grabs a public tweet, looks to see if it has three nouns, and if it does, creates a tweet using those three nouns. The code for the bot lives in a single JavaScript file called bot.js. At the top of that file, I've included all the Node.js packages I discussed in the first post. 
+To recap, my Twitter bot grabs a public tweet, looks to see if it has three nouns, and if it does, creates a tweet using those three nouns. The code for the bot lives in a single JavaScript file called bot.js. At the top of that file, I've included all the Node.js packages I discussed in the first post.
 
 {% highlight javascript  %}
 var _           = require('lodash');
@@ -34,14 +43,14 @@ var wordnikKey          = process.env.WORDNIK_API_KEY;
 
 To make sure I don't accidentally publish any private keys, I like store API keys as environment variables. In the code above, I use `process.env` to access those keys. (I'll talk about how to set these up in a production environment in the next blog post).
 
-After these definitions, the rest of the bot.js file is comprised of a series of functions that are called in order. Though defined at the bottom of the file, let's look at how those functions are called in the code snippet below: 
+After these definitions, the rest of the bot.js file is comprised of a series of functions that are called in order. Though defined at the bottom of the file, let's look at how those functions are called in the code snippet below:
 
 {% highlight javascript %}
 run = function() {
   async.waterfall([
-    getPublicTweet, 
-    extractWordsFromTweet, 
-    getAllWordData, 
+    getPublicTweet,
+    extractWordsFromTweet,
+    getAllWordData,
     findNouns,
     formatTweet,
     postTweet
@@ -58,9 +67,9 @@ run = function() {
 }
 {% endhighlight %}
 
-The above function, `run()`,  called once an hour by `setInterval()` (but not shown here), is really cool. It uses an [async](https://github.com/caolan/async#waterfall) method called `waterfall()` which runs takes an array of tasks and an optional callback. async ensures that each of the functions in the array of tasks is called one a time and passes its results to the next function in the list. If any of the tasks fail, the next function isn't executed. Instead, the main callback is called with an error. 
+The above function, `run()`,  called once an hour by `setInterval()` (but not shown here), is really cool. It uses an [async](https://github.com/caolan/async#waterfall) method called `waterfall()` which runs takes an array of tasks and an optional callback. async ensures that each of the functions in the array of tasks is called one a time and passes its results to the next function in the list. If any of the tasks fail, the next function isn't executed. Instead, the main callback is called with an error.
 
-The first function called in the array of tasks is `getPublicTweet()` which attempts to grab a public tweet. If successful, it creates an object called `botData` which is passed to the next function in the callback. 
+The first function called in the array of tasks is `getPublicTweet()` which attempts to grab a public tweet. If successful, it creates an object called `botData` which is passed to the next function in the callback.
 
 {% highlight javascript %}
 getPublicTweet = function(cb) {
@@ -80,7 +89,7 @@ getPublicTweet = function(cb) {
 };
 {% endhighlight %}
 
-The `botData` object will grow as its passed from one function to the next, building up the elements needed to construct our bot's tweet. 
+The `botData` object will grow as its passed from one function to the next, building up the elements needed to construct our bot's tweet.
 
 The second line `t.get(...` uses the Twitter Search API to retrieve a public tweet. Without using the Stream API, I had a hard time getting a random tweet that wasn't a duplicate. So I'm using the query term, 'a',to find a recent tweet with the word 'a' in it. (Lame, I know. I'd like to improve this in future enhancements and other bots I might build.)
 
@@ -110,16 +119,16 @@ extractWordsFromTweet = function(botData, cb) {
 };
 {% endhighlight %}
 
-This function has a lot going on. As the function is entered, a series of patterns are defined and then added to the `excludePatterns[]` list. LoDash's `_.each` is called with that list of patterns and applies each pattern it contains to tweet we grqbbed. Once URLs, words made up of 1-2 characters, non-alpha, and twitter handles are removed from the tweet and replaced with spaces, the tweet is broken into a list, `botData.tweetWordList`. Several 'boring' words are omitted from the list and the next function is called. 
+This function has a lot going on. As the function is entered, a series of patterns are defined and then added to the `excludePatterns[]` list. LoDash's `_.each` is called with that list of patterns and applies each pattern it contains to tweet we grqbbed. Once URLs, words made up of 1-2 characters, non-alpha, and twitter handles are removed from the tweet and replaced with spaces, the tweet is broken into a list, `botData.tweetWordList`. Several 'boring' words are omitted from the list and the next function is called.
 
-The next function, `getAllWordData()` uses `async.map` which takes an array (the list of words from a tweet), an iterator (another function, `getWordData()`), and a callback. 
+The next function, `getAllWordData()` uses `async.map` which takes an array (the list of words from a tweet), an iterator (another function, `getWordData()`), and a callback.
 
 {% highlight javascript %}
 getAllWordData = function(botData, cb) {
   async.map(botData.tweetWordList, getWordData, function(err, results){
     botData.wordList = results;
     cb(err, botData);
-  }); 
+  });
 }
 {% endhighlight %}
 
@@ -150,7 +159,7 @@ getWordData = function(word, cb) {
 
 `getWordData()` takes a word and looks it up using the Wordnik API. The function begins by constructing the URL for the Wordnik API endpoint to be called. Next, the node package `node-rest-client`'s method, `get` is called to perform the API request. If we get a response, that data is passed back into the `botData` object.
 
-The Wordnik API endpoint passes back all sorts of interesting information about the word queried, including definitions and alternate words, but for this bot, we're most interested in identifying the part of speech the word repressents. 
+The Wordnik API endpoint passes back all sorts of interesting information about the word queried, including definitions and alternate words, but for this bot, we're most interested in identifying the part of speech the word repressents.
 
 Once all the words from the tweet have been queried, the next function, `findNouns()` is called:
 
@@ -176,7 +185,7 @@ findNouns = function(botData, cb) {
 }
 {% endhighlight %}
 
-The `findNouns()` function is really important because it's a big determiner in whether the @PickTwoBot will actually tweet a new message. In this function, a new list is defined, `botData.nounList`. After compacting `botData.wordList`, to remove any empty elements, the function loops through each element in the wordList and examines its `partOfSpeech` property. If the property is a noun or proper noun, it is added to the `botData.nounList` array. 
+The `findNouns()` function is really important because it's a big determiner in whether the @PickTwoBot will actually tweet a new message. In this function, a new list is defined, `botData.nounList`. After compacting `botData.wordList`, to remove any empty elements, the function loops through each element in the wordList and examines its `partOfSpeech` property. If the property is a noun or proper noun, it is added to the `botData.nounList` array.
 
 If three nouns aren't found, we return an error to the callback function indicating there weren't enough nouns to create a tweet, then the program exits. But, if three nouns were found, the next function, `formatTweet()` is called:
 
@@ -196,7 +205,7 @@ formatTweet = function(botData, cb) {
 }
 {% endhighlight %}
 
-In this function, a new array is added to `botData`, called `pickTwoWordList`. Then `botData.pickTwoWordList` is sliced to retrieve the first three nouns in the list. Each of those words is capitalized, given a period at the end of it and joined to form a single string. 
+In this function, a new array is added to `botData`, called `pickTwoWordList`. Then `botData.pickTwoWordList` is sliced to retrieve the first three nouns in the list. Each of those words is capitalized, given a period at the end of it and joined to form a single string.
 
 Finally the tweet can be constructed! The three lines that comprise @PickTwoBot's tweet are combined to form, `botData.tweetBlock`. With that constructed, the final function, `postTweet()` can be called:
 
@@ -210,7 +219,7 @@ postTweet = function(botData, cb) {
 }
 {% endhighlight %}
 
-`postTweet()`, surprisingly enough, attempts to the post the Tweet we've constructed to Twitter. Before it does that, the tweet is reviewed against a list of blacklisted words (from the node module, `wordfilter`. If there are any flagged words, the tweet is abandoned. Otherwise, the Twit method, `post` is called with the tweet we want to post. 
+`postTweet()`, surprisingly enough, attempts to the post the Tweet we've constructed to Twitter. Before it does that, the tweet is reviewed against a list of blacklisted words (from the node module, `wordfilter`. If there are any flagged words, the tweet is abandoned. Otherwise, the Twit method, `post` is called with the tweet we want to post.
 
 If that's successful, we're done and the masses will either marvel or puzzle at the tweet we've just posted!
 
@@ -218,13 +227,12 @@ All the [code for my Twitter bot can be found on Github](https://github.com/urso
 
 ## A few thoughts...
 
-I'm pretty happy with the code for this bot, but a few improvements could (and should) be made: 
+I'm pretty happy with the code for this bot, but a few improvements could (and should) be made:
 
-* Look for blacklisted words when the public tweet has first been retrieved. It would be smarter to abandon the program right away rather than going through all the steps to compose the tweet. 
-* Come up with a better way to retrieve a single public tweet from the Twitter API. It feels silly sending a query for a tweet with the word, 'a', in it. 
+* Look for blacklisted words when the public tweet has first been retrieved. It would be smarter to abandon the program right away rather than going through all the steps to compose the tweet.
+* Come up with a better way to retrieve a single public tweet from the Twitter API. It feels silly sending a query for a tweet with the word, 'a', in it.
 * Generalize many of the functions to they can be reused for other types of Twitter bots I might want to create!
 
 ## Ready for part three - Deploying your Twitter bot!
 
 In the third and final blog post in this series, I'll talk about how to deploy your own bot. This step, which took me the longest of all three steps, is actually the simplest once you know what you're doing. See you next post!
-

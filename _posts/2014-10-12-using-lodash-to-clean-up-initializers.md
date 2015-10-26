@@ -2,6 +2,10 @@
 layout: post
 title: Using Lo-Dash to Clean Up Initializers in JavaScript
 date: 2014-10-12
+tags:
+- lodash
+- JavaScript
+- productivity
 ---
 
 Over the past week, I've started working on new project that involves a lot of JavaScript. As I started fleshing out ideas for the project, I was introduced to [Lo-Dash](https://lodash.com/), a functional programming library for *all of the things* in Javascript and I'm absolutely smitten.

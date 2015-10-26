@@ -2,6 +2,12 @@
 layout: post
 title: "Affine Day For a Transformation"
 date: 2014-09-30
+tags:
+- math
+- iOS
+- Swift
+- Xcode
+- projects
 ---
 
 As I learn iOS development with Swift, I've been trying to choose projects that help me explore different parts of the iOS SDK. To try out the new Photos Framework, I decided to create a photo app that lets you take a picture of a friend and replace their head with a cartoon one, because let's face it, this is an app you need. The app, called Creatures are Friends, is still a work in progress, but you can follow along [on Github](https://github.com/ursooperduper/creatures-are-friends).
