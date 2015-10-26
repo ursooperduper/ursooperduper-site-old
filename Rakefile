@@ -29,7 +29,7 @@ namespace :haml do
 	end
 
 	desc 'Parse haml index files'
-	task :indexes do
+	task :index do
 		Dir.glob('**/index.haml') do |path|
 			convert path, File.dirname(path)
 		end
@@ -48,7 +48,7 @@ namespace :haml do
 end
 
 desc 'Parse all haml items'
-task haml: ['haml:layouts', 'haml:includes', 'haml:indexes', 'haml:work']
+task haml: ['haml:layouts', 'haml:includes', 'haml:index', 'haml:work']
 
 desc 'Build all haml files for deployment'
 task build: [:haml]

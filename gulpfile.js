@@ -4,12 +4,37 @@ var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var exec         = require('child_process').exec;
 
+
 // Default task
 gulp.task('default', ['watch']);
 
 // Haml
-gulp.task('haml', function (cb) {
-  exec('rake haml', function (err, stdout, stderr) {
+gulp.task('haml:index', function (cb) {
+  exec('rake haml:index', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('haml:layouts', function (cb) {
+  exec('rake haml:layouts', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('haml:includes', function (cb) {
+  exec('rake haml:includes', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('haml:work', function (cb) {
+  exec('rake haml:work', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -37,10 +62,10 @@ gulp.task('autoprefixer', function () {
 
 // Watcher
 gulp.task('watch', function() {
-  gulp.watch('index.haml', ['haml']);
-  gulp.watch('_includes/_haml/*.haml', ['haml']);
-  gulp.watch('_layouts/_haml/*.haml', ['haml']);
-  gulp.watch('work/_haml/*.haml', ['haml']);
+  gulp.watch('index.haml', ['haml:index']);
+  gulp.watch('_includes/_haml/*.haml', ['haml:includes']);
+  gulp.watch('_layouts/_haml/*.haml', ['haml:layouts']);
+  gulp.watch('work/_haml/*.haml', ['haml:work']);
   gulp.watch('css/scss/*.scss', ['sass']);
   gulp.watch('css/*.css', ['autoprefixer']);
 });
