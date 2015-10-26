@@ -1,4 +1,4 @@
-/* ---------------------------->>> VARIABLES <<<---------------------------- */
+// ---------------------------->>> VARIABLES <<<-------------------------------
 
 // Main spacing sizes
 $spacing-unit:        20px;
@@ -11,8 +11,8 @@ $on-laptop:           800px;
 // Fonts and sizes
 $hl-font-stack:       "museo-slab", serif;
 $body-font-stack:     "rooney-sans", sans-serif;
-$base-font-size:      0.95em;
-$small-font-size:     0.89em;
+$base-font-size:      .95em;
+$small-font-size:     .89em;
 $base-line-height:    1.4;
 
 // Colors
@@ -24,9 +24,12 @@ $grey-color-light:    #c9c9c9;
 $grey-color-dark:     #333;
 $contrast-color:      #f2cb05; // yellow
 $alert-color:         #f22e2e; // red
+$code-bg:             #eef;
+$another-grey-color:  #999;
+$white:               #fff;
+$black:               #000;
 
-
-/* ----------------------------->>> MIX-INS <<<----------------------------- */
+// ----------------------------->>> MIX-INS <<<--------------------------------
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -34,34 +37,8 @@ $alert-color:         #f22e2e; // red
   }
 }
 
-@mixin flex-box() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
 
-@mixin flex-flow($values) {
-  -webkit-flex-flow: $values;
-  -moz-box-flex-flow: $values;
-  -webkit-flex-flow: $values;
-  -ms-flex-flow: $values;
-  flex-flow: $values;
-}
-
-// shorthand for flex-grow, flex-shrink, and flex-basis
-// the default is 0 1 auto
-@mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex: $values;
-  -webkit-flex: $values;
-  -ms-flex: $values;
-  flex: $values;
-}
-
-
-/* ------------------------------>>> RESETS <<<----------------------------- */
+//------------------------------>>> RESETS <<<---------------------------------
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -71,7 +48,7 @@ dl, dd, ol, ul, figure {
 }
 
 
-/* ------------------------------->>> BASE <<<------------------------------ */
+// ------------------------------->>> BASE <<<---------------------------------
 
 html, body {
   height: 100%;
@@ -79,17 +56,17 @@ html, body {
 
 body {
   background-color: $background-color;
-
+  color: $txt-color;
   font: {
     family: $body-font-stack;
     size: $base-font-size;
     weight: 300;
   }
   line-height: $base-line-height;
-  color: $txt-color;
+
 }
 
-/* Set 'margin-bottom' to maintain vertycal rhythm */
+// Set 'margin-bottom' to maintain vertycal rhythm
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -99,8 +76,8 @@ ul, ol, dl, figure,
 
 img {
   display: block;
-  margin: 0 auto;
   max-width: 100%;
+  margin: 0 auto;
   padding: $spacing-unit-sm 0;
   vertical-align: middle;
 }
@@ -117,8 +94,8 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
   color: darken($brand-color, 20%);
+  font-weight: 500;
 }
 
 a {
@@ -153,21 +130,21 @@ iframe {
   margin: 0 auto;
 }
 
-/* Code Formatting */
+// Code Formatting
 pre, code {
   padding: 1px 5px;
 
   border: 1px solid $grey-color-light;
   border-radius: 3px;
 
-  background-color: #eef;
+  background-color: $code-bg;
 
   font-size: 1.1em;
 }
 
 pre {
-  overflow-x: scroll;
   padding: 8px 12px;
+  overflow-x: scroll;
 
   > code {
     padding: 0;
@@ -180,29 +157,27 @@ hr {
   margin-bottom: $spacing-unit;
 
   border: 0;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed $grey-color-light;
 
-  background: #999;
+  background: $another-grey-color;
 }
 
 
-/* ----------------------------->>> LAYOUT <<<------------------------------ */
+// ----------------------------->>> LAYOUT <<<---------------------------------
 
 .l-wrapper {
-  @include flex-box();
-  @include flex-flow(column nowrap);
+  display: flex;
   min-height: 100%;
+  flex-flow: column nowrap;
 }
 
 .l-align-middle {
-  max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-  max-width:         calc(800px - (#{$spacing-unit} * 2));
+  max-width: calc(800px - (#{$spacing-unit} * 2));
   margin: 0 auto;
   padding: 0 $spacing-unit;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(800px - (#{$spacing-unit}));
-    max-width:         calc(800px - (#{$spacing-unit}));
+    max-width: calc(800px - (#{$spacing-unit}));
     padding: 0 $spacing-unit-sm;
   }
 }
@@ -212,17 +187,18 @@ hr {
 }
 
 .l-page-content {
-  flex: 1;
   padding: $spacing-unit;
+  flex: 1;
 }
 
 .l-footer-wrapper {
-  @include flex-box();
-  @include flex-flow(row nowrap);
+  display: flex;
   margin-left: -$spacing-unit-sm;
 
-  font-size: 1.2em;
   color: $grey-color;
+  font-size: 1.2em;
+
+  flex-flow: row nowrap;
 }
 
 .l-footer-col {
@@ -231,39 +207,35 @@ hr {
 }
 
 .l-footer-col-1 {
+  width: calc(30% - #{$spacing-unit-sm});
   margin-bottom: $spacing-unit-sm;
   padding-left: $spacing-unit-sm;
-  width: -webkit-calc(30% - #{$spacing-unit-sm});
-  width:         calc(30% - #{$spacing-unit-sm});
 }
 
 .l-footer-col-2 {
+  width: calc(70% - #{$spacing-unit});
   margin-bottom: $spacing-unit-sm;
   padding-left: $spacing-unit-sm;
-  width: -webkit-calc(70% - #{$spacing-unit});
-  width:         calc(70% - #{$spacing-unit});
 
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 @include media-query($on-laptop) {
   .l-footer-col-1,
   .l-footer-col-2 {
-    width: -webkit-calc(100% - #{$spacing-unit-sm});
-    width:         calc(100% - #{$spacing-unit-sm});
+    width: calc(100% - #{$spacing-unit-sm});
   }
 }
 
 @include media-query($on-palm) {
   .l-footer-wrapper {
-    @include flex-box();
-    @include flex-flow(column nowrap);
+    display: flex;
+    flex-flow: column nowrap;
   }
 
   .l-footer-col-1,
   .l-footer-col-2 {
-    width: -webkit-calc(100% - #{$spacing-unit-sm});
-    width:         calc(100% - #{$spacing-unit-sm});
+    width: calc(100% - #{$spacing-unit-sm});
   }
 
   .l-footer-col-2 {
@@ -272,33 +244,25 @@ hr {
 }
 
 
-/* ---------------------------->>> MODULES <<<------------------------------ */
+// ---------------------------->>> MODULES <<<---------------------------------
 
 .site-header {
   height: 100px;
 
-  background: url(../images/header-bg2.jpg) no-repeat center center;
-}
-
-a.site-title {
-  text-decoration: none;
-}
-
-a.site-title:hover, a.site-title:visited {
-  color: $contrast-color;
-  text-decoration: none;
+  background: url('../images/header-bg2.jpg') no-repeat center center;
 }
 
 .site-title {
   margin-bottom: 0;
 
+  color: $contrast-color;
   font: {
-    size: 3.8em;
     family: $hl-font-stack;
+    size: 3.8em;
     weight: 900;
   }
   line-height: 75px;
-  color: $contrast-color;
+  text-decoration: none;
   text-shadow: 4px 4px 2px $alert-color;
 
   @include media-query($on-laptop) {
@@ -308,54 +272,44 @@ a.site-title:hover, a.site-title:visited {
   }
 
   @include media-query($on-palm) {
-    font-size: 1.5em;
     padding-left: 2px;
+    font-size: 1.5em;
   }
+}
+
+.site-title:hover, .site-title:visited {
+  color: $contrast-color;
+  text-decoration: none;
 }
 
 .site-nav {
   margin: {
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
   }
   padding-left: 70px;
 
+  color: $white;
   font: {
     family: $hl-font-stack;
     size: 1.1em;
     weight: 400;
   }
-  color: #fff;
-
-  .menu-icon {
-    display: none;
-  }
-
-  .page-link {
-    color: #fff;
-    line-height: $base-line-height;
-    text-shadow: 2px 2px 2px $alert-color;
-    vertical-align: bottom;
-
-    // Gaps between nav items, but not on the first one
-    &:not(:first-child) {
-      margin-left: 20px;
-    }
-  }
 
   @include media-query($on-palm) {
-    @include flex-box();
-    @include flex-flow(column nowrap);
-    justify-content: flex-end;
-    margin: 0px;
-    padding-left: 0px;
+    display: flex;
     position: absolute;
-    right: 10px;
     top: 20px;
+    right: 10px;
+    margin: 0;
+    padding-left: 0;
 
     border-radius: 8px;
 
-    background-color: #FFF;
+    background-color: $white;
+
+    flex-flow: column nowrap;
+    justify-content: flex-end;
 
     .menu-icon {
       display: block;
@@ -386,20 +340,36 @@ a.site-title:hover, a.site-title:visited {
   }
 }
 
+.menu-icon {
+  display: none;
+}
+
+.page-link {
+  color: $white;
+  line-height: $base-line-height;
+  text-shadow: 2px 2px 2px $alert-color;
+  vertical-align: bottom;
+
+  // Gaps between nav items, but not on the first one
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
 .site-footer {
+  width: 100%;
   height: 100px;
   padding: $spacing-unit 0;
-  width: 100%;
 
-  background: url(../images/bottom-bg.png) no-repeat center center;
-
-  h3 {
-    font-family: $hl-font-stack;
-  }
+  background: url('../images/bottom-bg.png') no-repeat center center;
 
   @include media-query($on-palm) {
     height: 75px;
     padding: $spacing-unit-sm;
+  }
+
+  h3 {
+    font-family: $hl-font-stack;
   }
 }
 
@@ -409,8 +379,8 @@ a.site-title:hover, a.site-title:visited {
   list-style: none;
 
   li {
-    float: left;
     padding-right: 10px;
+    float: left;
 
     font-size: 1.8em;
   }
@@ -435,18 +405,18 @@ a.site-title:hover, a.site-title:visited {
 }
 
 .post-meta {
+  color: $grey-color;
   font: {
     size: $small-font-size;
     style: italic;
   }
-  color: $grey-color;
 }
 
 .post-title {
   color: darken($brand-color, 20%);
   font: {
-    size: 2.6em;
     family: $hl-font-stack;
+    size: 2.6em;
   }
   letter-spacing: -1px;
   line-height: 1;
@@ -464,22 +434,22 @@ a.site-title:hover, a.site-title:visited {
   margin-bottom: $spacing-unit;
 }
 
-/* Styles for actual blog posts */
+// Styles for actual blog posts
 .post-content {
   margin-bottom: $spacing-unit;
   padding-bottom: $spacing-unit * 2;
 
   h1, h2, h3, h4, .byline {
+    color: dark($brand-color, 20%);
     font: {
       family: $hl-font-stack;
-      color: dark($brand-color, 20%);
     }
   }
 
   h1 {
     margin-bottom: 0;
 
-    font-size: 2.0em;
+    font-size: 2em;
 
     @include media-query($on-laptop) {
       font-size: 1.8em;
@@ -523,33 +493,34 @@ a.site-title:hover, a.site-title:visited {
 
 .more {
   font: {
-    weight: 700;
-    size: 1.0em;
-    style: italic;
     family: $hl-font-stack;
+    size: 1em;
+    style: italic;
+    weight: 700;
   }
   text-align: right;
 }
 
-p.bottom-line {
+.bottom-line {
   font: {
-    size: 0.85em;
+    size: .85em;
     style: italic;
   }
 }
 
 .work {
-  @include flex-box();
-  @include flex-flow(row wrap);
+  display: flex;
   padding-bottom: $spacing-unit * 2;
+  flex-flow: row wrap;
 }
 
 .work-thumb {
+  width: 200px;
+  max-width: 200px;
+  margin-top: $spacing-unit-sm;
   margin-right: $spacing-unit;
   padding-right: $spacing-unit-sm;
-  margin-top: $spacing-unit-sm;
-  max-width: 200px;
-  width: 200px;
+
   font-weight: 700;
 
   > img {
@@ -568,26 +539,25 @@ p.bottom-line {
 .lightbox {
   margin-top: $spacing-unit;
 
-    > ul {
-    @include flex-box();
-    @include flex-flow(row wrap);
+  > ul {
+    display: flex;
 
     list-style: none;
 
+    flex-flow: row wrap;
+
     > li {
+      position: relative;
       margin-right: $spacing-unit;
       margin-bottom: $spacing-unit;
-      position: relative;
 
-      background-color: #FFF;
+      background-color: $white;
 
+      color: $grey-color;
       font-size: $small-font-size;
       text-align: center;
-      color: $grey-color;
 
-      -webkit-box-shadow: 0 8px 6px -6px rgba(48, 102, 102, 0.75);
-      -moz-box-shadow: 0 8px 6px -6px rgba(48, 102, 102, 0.75);
-      box-shadow: 0 8px 6px -6px rgba(48, 102, 102, 0.75);
+      box-shadow: 0 8px 6px -6px rgba(48, 102, 102, .75);
 
       cursor: pointer;
 
@@ -595,51 +565,50 @@ p.bottom-line {
         display: block;
         padding: 0;
       }
+
+      :hover {
+        box-shadow: 0 8px 6px -6px rgba(48, 102, 102, .75);
+
+        .image-title {
+          opacity: 1;
+        }
+
+        .title {
+          transform: scale(1);
+        }
+      }
     }
   }
 }
 
 .image-title {
-  @include flex-box();
-  @include flex-flow(column nowrap);
-  align-items: middle;
-  height: 145px;
-  justify-content: center;
-  left: 0;
+  display: flex;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
+  height: 145px;
 
-  background: rgba(48, 102, 102, 0.75);
+  transition: all .5s;
+
+  background: rgba(48, 102, 102, .75);
 
   opacity: 0;
 
-  transition: all 0.5s;
+  flex-flow: column nowrap;
+  align-items: middle;
+  justify-content: center;
 }
 
 .title {
-  color: #FFF;
-  font: {
-    size: 1.4em;
-    family: $hl-font-stack;
-  }
-
   transform: scale(0);
-  transition: all 0.25s;
-}
+  transition: all .25s;
 
-.lightbox li:hover {
-  -webkit-box-shadow: 0 8px 6px -6px rgba(48, 102, 102, 0.75);
-  -moz-box-shadow: 0 8px 6px -6px rgba(48, 102, 102, 0.75);
-  box-shadow: 0 8px 6px -6px rgba(48, 102, 102, 0.75);
-}
-
-.lightbox li:hover .image-title {
-  opacity: 1;
-}
-
-.lightbox li:hover .title {
-  transform: scale(1);
+  color: $white;
+  font: {
+    family: $hl-font-stack;
+    size: 1.4em;
+  }
 }
 
 .lb-title {
@@ -652,60 +621,67 @@ p.bottom-line {
 
 // Lightbox
 .lb-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
 
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, .85);
 }
 
 .lb-canvas {
-  @include flex-box();
-  @include flex-flow(column no-wrap);
-  align-items: center;
-  height: 50px;
-  left: 0;
-  padding: $spacing-unit-sm;
+  display: flex;
   position: fixed;
   top: 0;
+  left: 0;
   width: 50px;
+  height: 50px;
+  padding: $spacing-unit-sm;
 
-  background: #FFF;
+  background: $white;
 
-  box-shadow: 0 0 20px 5px #000;
+  box-shadow: 0 0 20px 5px $black;
+
+  flex-flow: column no-wrap;
+  align-items: center;
+
 }
 
 .lb-canvas-loading {
-  background: #FFF url("../images/spinner.gif") center center no-repeat;
+  background: $white url('../images/spinner.gif') center center no-repeat;
 }
 
 .lb-controls {
-  bottom: 30px;
-  left: 0;
-  margin: 0 auto;
   position: fixed;
   right: 0;
+  bottom: 30px;
+  left: 0;
   width: 400px;
+  margin: 0 auto;
 
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, .75);
 
-  color: #FFF;
-}
+  color: $white;
 
-.lb-controls div {
-  height: 30px;
+  div {
+    height: 30px;
 
-  line-height: 30px;
+    line-height: 30px;
+  }
+
+  .inactive {
+    cursor: default;
+    opacity: .1;
+  }
 }
 
 .lb-prev, .lb-next {
-  padding: 5px 12px;
   position: absolute;
   top: 0;
+  padding: 5px 12px;
 
-  background: black;
+  background: $black;
 
   cursor: pointer;
 }
@@ -713,28 +689,24 @@ p.bottom-line {
 .lb-prev {
   left: 0;
 
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, .1);
 }
 
 .lb-next {
   right: 0;
 
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, .1);
 }
 
-.lb-controls .inactive {
-  cursor: default;
-  opacity: 0.1;
-}
 
 // Work sample meta data
 .project-meta {
-  font-size: 1.1em;
   margin-bottom: $spacing-unit;
+  font-size: 1.1em;
 
   > dt {
-    float: left;
     width: 75px;
+    float: left;
 
     color: darken($brand-color, 20%);
     font-family: $hl-font-stack;
@@ -747,12 +719,12 @@ p.bottom-line {
 
 // Tall images in 'work sample' section
 .side-img {
-  float: left;
   margin-right: $spacing-unit;
+  float: left;
 
   @include media-query($on-palm) {
-    float: none;
     margin-right: 0 auto;
+    float: none;
   }
 }
 
