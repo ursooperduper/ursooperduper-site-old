@@ -21,7 +21,7 @@ In this first post, I'll walk through everything you need to set up and configur
 
 I'm excited. You're excited. So let's get started!
 
-![Excited!](/images/excited-fan.gif)
+![Excited!](/images/gifs/excited-fan.gif)
 
 ## Creating a new Twitter Account
 
@@ -51,7 +51,7 @@ You'll need a set of API keys to allow you bot to do cool things with Twitter, s
 
 Providing you've verified your email address, you'll arrive at the Application Management page for your new bot. This is where you'll get your Twitter API keys. On the Details tab, if you scroll down to view your Appliation Settings, you'll notice your app's access level is currently set to read-only. Oh noes!!
 
-![Oh noes!](/images/ohnoes-dog.gif)
+![Oh noes!](/images/gifs/ohnoes-dog.gif)
 
 ### Set read and write access for your bot
 
@@ -139,7 +139,7 @@ wordfilter is a small, but extremely useful module that filters strings for bad 
 npm install wordfilter --save
 ```
 
-![Iron Man is ready to part two.](/images/ironman-ready.gif)
+![Iron Man is ready to part two.](/images/gifs/ironman-ready.gif)
 
 ## Ready for part two - Twitter bot coding fun!
 

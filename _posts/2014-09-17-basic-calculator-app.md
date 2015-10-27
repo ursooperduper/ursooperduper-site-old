@@ -12,13 +12,13 @@ tags:
 
 My first iOS app is a basic calculator. I chose this  project as a way to learn about Xcode, iOS development principles and workflows, and to finally write some actual Swift code.
 
-![Get mathematical!](/images/mathematical.gif)
+![Get mathematical!](/images/gifs/mathematical.gif)
 
 ## Project Goals
 
 A calculator app can go from simple to complex very quickly. Just turn the iOS calculator from portrait to landscape mode and marvel at the enhanced functionality!
 
-![The landscape view of the iOS standard calculator](/images/ios-calculator-landscape.png)
+![The landscape view of the iOS standard calculator](/images/blog/ios-calculator-landscape.png)
 
 I don't want to spend my time at Hacker School making a super-loaded, uber-calculator, so I decided to keep my requirements very simple:
 
@@ -36,11 +36,11 @@ The storyboard for the calculator is pretty simple. It's just one View and the l
 
 It was really easy to layout the buttons on the storyboard view, but when I compiled and ran the first version to test, the whole view was displayed half-off my iPhone screen. Oh noes! Diving into Xcode docs, I learned about autolayout for universal app design in Xcode 6. The idea is to create a generic layout that will render appropriately on target devices regardless of their screen size.
 
-![The generic layout for my calculator app](/images/calculator-generic-layout.png)
+![The generic layout for my calculator app](/images/blog/calculator-generic-layout.png)
 
 You set up constraints for Views and UI elements which is a way of explaining how each element relates to the rest in terms of position and size.
 
-![The same calculator app design shown on the iPhone and iPad](/images/calculator-various-devices.png)
+![The same calculator app design shown on the iPhone and iPad](/images/blog/calculator-various-devices.png)
 
 It's not the sexiest design ever, but it's just a calculator and in this case, my target device is just the iPhone, so I felt pretty good about what I had set up.
 
@@ -112,7 +112,7 @@ Then I compared my calculator to Apple's iOS calculator. The calculation to perf
 
 Apple's calculator app returned a value of `11`. Yes. Very good. Mine returned a value of `21`.
 
-![Head meet desk](/images/head-desk.gif)
+![Head meet desk](/images/gifs/head-desk.gif)
 
 My app was just running through the user entered operators and digits in order and PAYING ABSOLUTELY NO ATTENTION TO OPERATOR PRECEDENCE!
 
@@ -183,7 +183,7 @@ Then each time a mathematic operation needs to be performed, I can simply use th
 
 And here's the final product:
 
-![Basic iOS calculator UI](/images/basic-ios-calculator.png)
+![Basic iOS calculator UI](/images/blog/basic-ios-calculator.png)
 
 ## Next steps
 

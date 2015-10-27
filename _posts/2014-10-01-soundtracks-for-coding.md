@@ -14,7 +14,7 @@ A good movie tells a story that allows the viewer to suspend reality as they're 
 
 Scores enrich and keep a story moving. They heighten dramatic and intense scenes and leave us on the edges of our seats. A score can bring us to tears when a character is experiencing hardship. When the poor kids manage to escape from pirates and bring home the lost treasure thus saving their ramshackle home (guess the movie), the music that accompanies it can fill your heart with so much joy that you find yourself trying to hide happy tears from your fellow movie watchers.
 
-![Ghostbusters dancing](/images/ghostbusters-dance.gif)
+![Ghostbusters dancing](/images/gifs/ghostbusters-dance.gif)
 
 ## Why am I writing about this?
 
@@ -22,7 +22,7 @@ I like to think we're all living the epic extended director's cut bio-pics of ou
 
 However you like to consume music - from an iTunes library, favorite CD (some of us still own these), or streaming service - the latest hiphopopraparazzirockerjam might be awesome, but what if you could transform all the hours you send programming, into a truly epic movie-like moments?
 
-![Working hard](/images/working-hard.gif)
+![Working hard](/images/gifs/working-hard.gif)
 
 Today, I present you with a series of Spotify playlists designed to make your days more epic - whether you're a programmer, designer, product manager, or ringette coach - while I'll relate the playlists here to programming - they'll likely work for almost any life experience. You're welcome.
 

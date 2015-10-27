@@ -10,7 +10,7 @@ tags:
 
 Over the past week, I've started working on new project that involves a lot of JavaScript. As I started fleshing out ideas for the project, I was introduced to [Lo-Dash](https://lodash.com/), a functional programming library for *all of the things* in Javascript and I'm absolutely smitten.
 
-![I'm in love.](/images/pokemon-love.gif)
+![I'm in love.](/images/gifs/pokemon-love.gif)
 
 Here's some sample code for an object in my app. There's a lot of repetition as I initialize and set defaults for properties of the Circle object:
 

@@ -20,7 +20,7 @@ Figuring out how to deploy a bot took several attempts because there are so many
 
 Luckily, I found a much easier way to host my bot, which is both free and simple to set up.
 
-![Excited!](/images/excited-wiig.gif)
+![Excited!](/images/gifs/excited-wiig.gif)
 
 ## Heroku to the rescue!
 By far, my favorite application platform is Heroku. It's an affordable, easy to use service with a well-documented CLI (command line interface) that's pure joy to work with. Heroku has great how-to guides available to deploy just about any sort of application. In my case, I used the [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) doc. That doc is good enough to get you most of the way there deploying your bot, but I'll summarize the steps below as well since there are a few differences.
@@ -111,7 +111,7 @@ setInterval(function() {
 
 If you've made all these updates and pushed everyting to Heroku, your app is **READY TO RUN!**
 
-![The bot is ready!](/images/oprah-excited.gif)
+![The bot is ready!](/images/gifs/oprah-excited.gif)
 
 Each time you push to Heroku, your package.json and Procfile will be detected and run. So with your new Procfile deployed, your app should start running right away. You can check that it's running with the command: `heroku ps`.
 
@@ -130,10 +130,10 @@ If your Node.js app isn't running, you can do some investigation by checking the
 
 With any luck, you've now deployed and have a running Twitter bot! I've created two bots so far. The first, [@PickTwoBot](http://twitter.com/picktwobot), is the bot discussed in this series of blog posts. It spews forth such gems as:
 
-![Pick Two Bot Tweet](/images/picktwobot.png)
+![Pick Two Bot Tweet](/images/blog/picktwobot.png)
 
 I've also created a new bot - a sort of homage to Charles Dickens, named  [@TaleOfTwoTweets](https://twitter.com/taleoftwotweets). This bot looks for two tweets, one with the word 'best' in it, the other with the word, 'worst' in it. It then looks at the word in those tweets that follows after 'best' or 'worst' and constructs a tweet in the format, "It was the best of <word>, it was the worst of <word>." Here's an example:
 
-![Tale of Two Tweets Bot Tweet](/images/taleoftwotweets.png)
+![Tale of Two Tweets Bot Tweet](/images/blog/taleoftwotweets.png)
 
 And so, that wraps up my series on creating your own Twitter bot. If you create a bot, I'd love to check it out. Include a link to your bot below or @ me on [Twitter](https://twitter.com/ursooperduper)!

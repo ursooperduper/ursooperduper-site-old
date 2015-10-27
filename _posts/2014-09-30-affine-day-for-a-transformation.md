@@ -18,19 +18,19 @@ Once the cartoon head is oriented the way the user likes it, it can be saved to 
 
 I thought it would be trivial. Take the two images in the app's UIView and save them as a new image. It should be easy.
 
-![I cried.](/images/bttf-sad.gif)
+![I cried.](/images/gifs/bttf-sad.gif)
 
 But, no. Not easy at all. Making this work turned out to be one of the biggest challenges I've encountered in iOS development so far. With the Photos Framework, it's really easy to access a user's photo library and view or save images so I didn't need to worry about that. But taking two images, saving their modified position/rotation/scale and saving them as one new image was a completely different story. A long, painful story.
 
 This happened.
-![Screenshot of CAF with incorrect positioning.](/images/bad-position-1.jpg)
+![Screenshot of CAF with incorrect positioning.](/images/blog/bad-position-1.jpg)
 
 And this.
-![Screenshot of CAF with incorrect positioning.](/images/bad-position-2.jpg)
+![Screenshot of CAF with incorrect positioning.](/images/blog/bad-position-2.jpg)
 
 Clearly, I wasn't working with the assets properly. The images I was creating were huge, the scale was off, and the positions were a complete mess.
 
-![OMFG](/images/neverending-story-scream.gif)
+![OMFG](/images/gifs/neverending-story-scream.gif)
 
 After a slight melt down, I calmly explored my options.
 
@@ -65,7 +65,7 @@ The other thing I needed to understand more in depth was what was happening to t
 
 A good friend walked me through affine transformations, how to create an affine transformation matrix, and helped connect the dots with  graphing I'd done back in elementary school! Remember plotting a series points to make a picture, then using another set of points, to move that picture to a new location and orientation on a graph? That involves an affine transformation!
 
-![I'm learning!](/images/learning.gif)
+![I'm learning!](/images/gifs/learning.gif)
 
 An affine transformation is a function that manipulates an image while preserving planes, points, and lines in that image. For example, if you rotate an image that has parallel lines, the lines should still be parallel after that rotation takes place. Affine transformations are used for all sorts of things - including some of which are extremely relevant to my photo project: rotation, scale, and translation. This function prevents distortion of the image as it's transformed and understanding this would restore my sanity.
 

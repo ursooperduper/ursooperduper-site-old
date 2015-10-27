@@ -19,7 +19,7 @@ To really understand LeWittScript, it's helpful to learn something about the art
 
 During the 1960s, LeWitt created sets of instructions for works of art. These instructions were than executed on a wall in a variety of media, including graphite, crayon, pencil crayons, ink washes, and acrylic paint.
 
-![Sol LeWitt. Wall Drawing-49](/images/wall-drawing-49.jpg)
+![Sol LeWitt. Wall Drawing-49](/images/blog/wall-drawing-49.jpg)
 Ref: [Wall Drawing 49 @ MASS MoCA](http://www.massmoca.org/lewitt/walldrawing.php?id=419)
 
 LeWitt's wall drawings were typically executed in a space they were to be shown and later torn down when a show closed. If a new show was to include the same piece, the instructions were executed again. It's also important to note that LeWitt wasn't usually the person executing the instructions. In fact, this was an important component to this work - the idea over the execution. This meant that the interpretation of a set of instructions was left to the individual executing the piece.
@@ -30,7 +30,7 @@ Before his death in 2007, Sol Lewitt had created over 1200 wall drawings. Perman
 
 After experiencing his work in person at MASS MoCA, I was completely taken with Sol LeWitt. But other than enjoying his work, I didn't get any of this much more thought. Sometimes, however, random elements fall into place and spark new ideas. At the show, I purchased a book about LeWitt and after a cross-country move earlier this year, the book ended up on the same shelf as my generative art and Processing books. Lightbulb! An idea is born!
 
-![An idea!](/images/aladdin-idea.gif)
+![An idea!](/images/gifs/aladdin-idea.gif)
 
 So the initial idea for LeWittScript is pretty simple. Imagine a rather plan/empty interface (purposely blank like a bare wall or canvas), where a user can enter a set of instructions for a piece of art that are then processed and drawn to an HTML5 canvas element.
 
@@ -52,7 +52,7 @@ I haven't started work here, but my plan is to use Ruby/Sinatra for the back-end
 
 So far, I've done a lot of experimentation parsing basic instructions and rendering them to the canvas. Here are a couple of examples.
 
-![Early LeWittScript Art](/images/lws-001.png)
+![Early LeWittScript Art](/images/blog/lws-001.png)
 
 ```
 Instructions:
@@ -60,7 +60,7 @@ There are 20 tiny aquamarine triangles.
 The background is slate gray.
 ```
 
-![Early LeWittScript Art](/images/lws-002.png)
+![Early LeWittScript Art](/images/blog/lws-002.png)
 
 ```
 Instructions:

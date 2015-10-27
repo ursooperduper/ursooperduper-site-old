@@ -40,7 +40,7 @@ More talks! One of the founders of Hacker School, Sonali Sridhar, gave an excell
 
 Another highlight of week two is that I discovered that Ghostbusters HQ is a five minute walk from the Hacker School space. The fan girl in me is still ridiculously giddy about this.
 
-![Fan girling at Ghostbusters HQ](/images/ghostbusters-hq.jpg)
+![Fan girling at Ghostbusters HQ](/images/blog/ghostbusters-hq.jpg)
 
 ## What did I accomplish this week?
 

@@ -11,7 +11,7 @@ tags:
 
 As I've been writing more code (yay!), the number of terminal windows and/or tabs I need to manage is growing (boo!). Sass is watching one window, jekyll monitoring another, and a server log in another. Switching back and forth between tabs all day is not ideal and I'd like to be able to see everything in one place. So while I've avoided it in the past due to its perceived complexity, I decided to learn tmux.
 
-![learning - image of a chick wearing roller skates](/images/learn-to-skate.gif)
+![learning - image of a chick wearing roller skates](/images/gifs/learn-to-skate.gif)
 
 But surely there are other ways of solving this problem, you say?
 
@@ -29,7 +29,7 @@ I could use [screen](http://www.gnu.org/software/screen/) to do this, but I hear
 
 [Terminal multiplexing](https://en.wikipedia.org/wiki/Terminal_multiplexer) (sometimes referred to as muxing - all the kids are doing it!), is the use of a single terminal window to display multiple terminal sessions. There are some really cool benefits to *muxing*, including being able to easily share sessions with others, have many windows open at once, and persistence. If you start a tmux session on a remote machine, then detach from it when you sign out, it's still running in the background anxiously awaiting your return. The next time you connect, you simply reattach to your session and pick up where you left off. Hurray!
 
-![Yes! News team celebration!](/images/anchorman-newsteam-yes.gif)
+![Yes! News team celebration!](/images/gifs/anchorman-newsteam-yes.gif)
 
 ## How I use tmux
 
@@ -71,7 +71,7 @@ To see which tmux sessions are currently running, enter:
 
 This lists all your running tmux sessions, like so:
 
-![terminal screenshot showing tmux ls command](/images/tmux-ls.png)
+![terminal screenshot showing tmux ls command](/images/blog/tmux-ls.png)
 
 The above image shows I have two tmux sessions running: 1 and blog and the date they were created.
 
@@ -111,7 +111,7 @@ For example, to build and edit this blog, I use jekyll, a static site generator;
 
 So I need at least 3 terminal windows: one to run jekyll, one to watch for sass changes, and one for working with git, rake, and other file system actions.
 
-![iterm and tmux](/images/tmux-terminal.png)
+![iterm and tmux](/images/blog/tmux-terminal.png)
 
 Above is a screenshot of what my iTerm window looks like with my blog's tmux session running.  And below is the simple script I use to set it up:
 
@@ -197,7 +197,7 @@ Though not tmux-specific, but speed and efficiency related, I've also created an
 
 `alias blog='cd /code/ursooperduper.github.io && \. tmux-ursoop-sess'`
 
-![High five!](/images/tina-fey-high-five.gif)
+![High five!](/images/gifs/tina-fey-high-five.gif)
 
 ## Before I go, a few shortcuts
 
