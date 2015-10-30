@@ -6,9 +6,6 @@ tags:
 - lodash
 - JavaScript
 - productivity
-categories:
-- Development
-- Tutorials
 ---
 
 Over the past week, I've started working on new project that involves a lot of JavaScript. As I started fleshing out ideas for the project, I was introduced to [Lo-Dash](https://lodash.com/), a functional programming library for *all of the things* in Javascript and I'm absolutely smitten.

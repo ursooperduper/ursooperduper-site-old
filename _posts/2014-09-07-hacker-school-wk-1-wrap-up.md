@@ -6,8 +6,6 @@ tags:
 - Recurse Center
 - education
 - life
-categories:
-- Life Events
 ---
 
 I'm currently on a train headed back to NYC, ready to start my second week of Hacker School. I'm pretty excited to get back at it, but thought it would be fun to reflect on the past week.

@@ -7,8 +7,6 @@ tags:
 - education
 - life
 - Recurse Center
-categories:
-- Life Events
 ---
 
 A few months ago, I left a comfortable job at a great start-up on the west coast, packed a big truck with all my belongings, and moved across the country with my partner to a small town on the east coast. And with this lifestyle change, it was also time for a career change.
