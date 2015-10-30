@@ -11,6 +11,10 @@ tags:
 - Wordnik
 - JavaScript
 - tutorials
+categories:
+- Projects
+- Development
+- Tutorials
 ---
 
 I recently watched a [talk by Darius Kazemi from the 2014 XOXO Festival](https://www.youtube.com/watch?v=l_F9jxsfGCw&). In the video Darius talks about side projects, of which he completed over 70 last year. He's created bots that [mash-up article headlines](https://twitter.com/TwoHeadlines), create [flow charts and venn diagrams](https://twitter.com/AutoCharts), and even make [random Amazon purchases](http://randomshopper.tumblr.com/post/35454415921/randomized-consumerism).

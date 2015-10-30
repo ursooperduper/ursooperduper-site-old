@@ -7,6 +7,9 @@ tags:
 - tmux
 - tools
 - tutorials
+categories:
+- Productivity
+- Development
 ---
 
 As I've been writing more code (yay!), the number of terminal windows and/or tabs I need to manage is growing (boo!). Sass is watching one window, jekyll monitoring another, and a server log in another. Switching back and forth between tabs all day is not ideal and I'd like to be able to see everything in one place. So while I've avoided it in the past due to its perceived complexity, I decided to learn tmux.

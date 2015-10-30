@@ -6,6 +6,8 @@ tags:
 - life
 - career
 - health
+categories:
+- Life Events
 ---
 
 This year I’ve been dealing with cancer, chemotherapy, surgeries, and general illness all of which have prevented me from working and doing a lot of the things I love. Some have suggested I write about it, so here’s my story, covering the past 14 months or so.

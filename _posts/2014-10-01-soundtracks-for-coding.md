@@ -6,6 +6,9 @@ tags:
 - music
 - productivity
 - Spotify
+categories:
+- Music
+- Development
 ---
 
 You know the feeling when you're completely absorbed in a movie?

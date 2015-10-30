@@ -8,6 +8,10 @@ tags:
 - Xcode
 - mobile
 - projects
+categories:
+- Projects
+- Development
+- Mobile
 ---
 
 My first iOS app is a basic calculator. I chose this  project as a way to learn about Xcode, iOS development principles and workflows, and to finally write some actual Swift code.

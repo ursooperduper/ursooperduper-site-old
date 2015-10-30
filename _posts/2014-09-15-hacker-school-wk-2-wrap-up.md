@@ -6,6 +6,8 @@ tags:
 - Recurse Center
 - education
 - life
+categories:
+- Life Events
 ---
 
 Week two, like week one, was awesome. Go figure. I was focused, had some good projects underway, and felt like I was learning a lot.

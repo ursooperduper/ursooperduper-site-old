@@ -5,6 +5,10 @@ date: 2014-10-23
 tags:
 - art
 - projects
+categories:
+- Projects
+- Development
+- Art
 ---
 
 Right before I started Hacker School, I had an idea for a web-app based on the artwork of one of my favorite American artists, Sol LeWitt. But I put that project off in favor of exploring mobile development with Swift. Yet my excitement for the art project continued to grow. So a couple of weeks ago, I decided to take a break from mobile and start work on LeWittScript.

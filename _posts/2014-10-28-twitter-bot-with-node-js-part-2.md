@@ -11,6 +11,10 @@ tags:
 - Wordnik
 - JavaScript
 - tutorials
+categories:
+- Projects
+- Development
+- Tutorials
 ---
 
 In the [first post in this series]({{ site.url }}/2014/10/27/twitter-bot-with-node-js-part-1.html), I covered how to set up a Twitter account, get API keys, and install Node.js and a few great modules that will help you create a Twitter bot. In this second post, I'll step through the code for my first Twitter bot, [@PickTwoBot](https://twitter.com/picktwobot), so you can see how easy it is to spout prolific nothings at the Twitterverse.

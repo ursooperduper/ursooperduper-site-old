@@ -12,6 +12,10 @@ tags:
 - JavaScript
 - Heroku
 - tutorials
+categories:
+- Projects
+- Development
+- Tutorials
 ---
 
 Thanks for all the great feedback on my [last blog post, reviewing the code for my Twitter bot]({{ site.url }}/2014/10/28/twitter-bot-with-node-js-part-2.html). I'll be sure to include more code deep dives in future posts. In this, the third and final post in the series on creating a Twitter bot, I'll share how I deployed my Twitter bot.
