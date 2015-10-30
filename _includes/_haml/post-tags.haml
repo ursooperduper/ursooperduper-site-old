@@ -1,0 +1,7 @@
+.tags
+  {% assign sortedTags = page.tags | sort %}
+  {% for t in sortedTags %}
+  .tag<
+    %a{href: "/tags/{{ t | downcase | replace:' ','-'}}" }<
+      {{ t }}
+  {% endfor %}

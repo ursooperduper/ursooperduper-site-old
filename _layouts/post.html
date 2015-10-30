@@ -4,6 +4,7 @@ layout: base
 <div class='post'>
   <header class='l-section-spacing'>
     <h1 class='post-title'>{{ page.title }}</h1>
+    {% include post-tags.html %}
     <p class='post-meta'>{{ page.date | date: "%b %-d, %Y" }}</p>
   </header>
   <article class='post-content'>

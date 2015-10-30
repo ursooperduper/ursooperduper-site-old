@@ -5,6 +5,9 @@ layout: base
 
   %header.l-section-spacing
     %h1.post-title {{ page.title }}
+
+    {% include post-tags.html %}
+
     %p.post-meta {{ page.date | date: "%b %-d, %Y" }}
 
   %article.post-content

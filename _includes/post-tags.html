@@ -1,0 +1,6 @@
+<div class='tags'>
+  {% assign sortedTags = page.tags | sort %}
+  {% for t in sortedTags %}
+  <div class='tag'><a href="/tags/{{ t | downcase | replace:' ','-'}}">{{ t }}</a></div>
+  {% endfor %}
+</div>
