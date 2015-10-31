@@ -8,7 +8,9 @@ github_username: ursooperduper
 instagram_username: ursooperduper
 dribbble_username: ursooperduper
 linkedin_username: sarahkuehnle
-exclude: ["tmux-ursoop-sess"]
+exclude:
+- node_modules
+- tmux-ursoop-sess
 encoding: "utf-8"
 baseurl: "/"
 markdown: kramdown
@@ -17,4 +19,3 @@ kramdown:
 highlighter: pygments
 lsi: false
 excerpt_separator: "\n\n"
-gems: ['jekyll-assets']
