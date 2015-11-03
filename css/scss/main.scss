@@ -486,10 +486,10 @@ hr {
   h3 {
     padding-top: $spacing-unit-sm;
 
-    font-size: 1.4em;
+    font-size: 1.2em;
 
     @include media-query($on-laptop) {
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
   }
 

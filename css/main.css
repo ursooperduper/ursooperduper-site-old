@@ -328,10 +328,10 @@ hr {
         font-size: 1.6em; } }
   .post-content h3 {
     padding-top: 10px;
-    font-size: 1.4em; }
+    font-size: 1.2em; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
-        font-size: 1.4em; } }
+        font-size: 1.2em; } }
   .post-content h4 {
     padding-top: 10px;
     font-size: 1.2em; }
