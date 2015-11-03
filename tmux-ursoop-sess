@@ -4,7 +4,7 @@ if [ $? != 0 ]
 then
   tmux new-session -s blog -n editor -d
   tmux send-keys -t blog:1.1 'cd ~/Dropbox/code/ursooperduper.github.io' C-m
-  tmux send-keys -t blog:1.1 'jekyll serve --watch' C-m
+  tmux send-keys -t blog:1.1 'jekyll serve --watch --incremental' C-m
 
   tmux split-window -h -t blog:1.1
   tmux send-keys -t blog:1.2 'cd ~/Dropbox/code/ursooperduper.github.io' C-m
