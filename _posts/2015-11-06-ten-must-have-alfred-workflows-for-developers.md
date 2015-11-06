@@ -25,7 +25,7 @@ When you've integrated Dash with Alfred, you just type ```dash``` and the term y
 
 ![Alfred Workflow - Homebrew](/images/blog/alfred/alfred-workflow-brew.png)
 
-[Homebrew](http://brew.sh/) is the ultimate packet manager for OS X. It allows you to install and manage tools like Ruby, Sinatra, and ImageMagick from a simple command line interface. [Homebrew Cask](http://caskroom.io/) is an extension of Homebrew that allows you to use that same command line interface to manage OS X applications.
+[Homebrew](http://brew.sh/) is the ultimate package manager for OS X. It allows you to install and manage tools like Ruby, Sinatra, and ImageMagick from a simple command line interface. [Homebrew Cask](http://caskroom.io/) is an extension of Homebrew that allows you to use that same command line interface to manage OS X applications.
 
 The Homebrew & Cask workflow gives you access to brew and cask commands directly from Alfred. When you run one of these commands in Alfred, your terminal application opens and completes the task. Easy!
 
