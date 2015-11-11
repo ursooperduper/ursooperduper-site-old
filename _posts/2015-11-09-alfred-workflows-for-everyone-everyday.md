@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Alfred Workflows for Everyone. Everyday!"
+date: 2015-11-09
 tags:
 - productivity
 - tools
