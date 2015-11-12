@@ -11,6 +11,7 @@ linkedin_username: sarahkuehnle
 exclude:
 - node_modules
 - tmux-ursoop-sess
+- vendor
 encoding: "utf-8"
 baseurl: "/"
 markdown: kramdown
