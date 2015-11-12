@@ -7,7 +7,7 @@ title: Work Samples
   {% for work in site.data.work-projects %}
   .work-thumb
     %a{ href: "/work/{{ work.url }}" }
-      %img{ src: "/images/work/thumbs/{{ work.thumb }}" }
+      %img{ src: "/images/work/thumbs/{{ work.thumb }}", alt: "{{ work.title }}" }
       {{ work.title }}
   {% endfor %}
 
@@ -17,6 +17,6 @@ title: Work Samples
   {% for per in site.data.personal-projects %}
   .work-thumb
     %a{ href: "/work/{{ per.url }}" }
-      %img{ src: "/images/work/thumbs/{{ per.thumb }}" }
+      %img{ src: "/images/work/thumbs/{{ per.thumb }}", alt: "{{ per.title }}" }
       {{ per.title }}
   {% endfor %}

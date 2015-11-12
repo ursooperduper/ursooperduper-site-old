@@ -6,7 +6,7 @@ title: Work Samples
   {% for work in site.data.work-projects %}
   <div class='work-thumb'>
     <a href='/work/{{ work.url }}'>
-      <img src='/images/work/thumbs/{{ work.thumb }}'>
+      <img alt='{{ work.title }}' src='/images/work/thumbs/{{ work.thumb }}'>
       {{ work.title }}
     </a>
   </div>
@@ -17,7 +17,7 @@ title: Work Samples
   {% for per in site.data.personal-projects %}
   <div class='work-thumb'>
     <a href='/work/{{ per.url }}'>
-      <img src='/images/work/thumbs/{{ per.thumb }}'>
+      <img alt='{{ per.title }}' src='/images/work/thumbs/{{ per.thumb }}'>
       {{ per.title }}
     </a>
   </div>
