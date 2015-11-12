@@ -47,7 +47,7 @@ First, log in to your normal Twitter account, go to [Device Settings](https://tw
 
 ## Create a new Twitter App
 
-You'll need a set of API keys to allow you bot to do cool things with Twitter, so visit [apps.twitter.com](apps.twitter.com) to create a new Twitter App. There, you'll specify a few details about your app (*note: you don't need a callback URL for the bot, so you can skip that optional field*) and agree to the Twitter Developer Agreement.
+You'll need a set of API keys to allow you bot to do cool things with Twitter, so visit [apps.twitter.com](https://apps.twitter.com) to create a new Twitter App. There, you'll specify a few details about your app (*note: you don't need a callback URL for the bot, so you can skip that optional field*) and agree to the Twitter Developer Agreement.
 
 Providing you've verified your email address, you'll arrive at the Application Management page for your new bot. This is where you'll get your Twitter API keys. On the Details tab, if you scroll down to view your Appliation Settings, you'll notice your app's access level is currently set to read-only. Oh noes!!
 
@@ -65,9 +65,9 @@ That takes care of the Twitter set up for your bot!
 
 ## Getting a Wordnik API Key
 
-The Twitter bot I created needs to identify nouns in the tweets it grabs and [Wordnik](https://www.wordnik.com) provides an API perfect for this very task.
+The Twitter bot I created needs to identify nouns in the tweets it grabs and [Wordnik](http://www.wordnik.com) provides an API perfect for this very task.
 
-To get an API key, you'll first need to [create a Wordnik account](https://www.wordnik.com/signup). After that, you can sign up for an API key by visiting [Wordnik's developer site](http://developer.wordnik.com). If you've used the Wordnik API before, I think you can just use the same API key again because the existing developer sign-up flow limits one API key per Wordnik username. Once you've got the Wordnik API key, save that somewhere safe as well.
+To get an API key, you'll first need to [create a Wordnik account](http://www.wordnik.com/signup). After that, you can sign up for an API key by visiting [Wordnik's developer site](http://developer.wordnik.com). If you've used the Wordnik API before, I think you can just use the same API key again because the existing developer sign-up flow limits one API key per Wordnik username. Once you've got the Wordnik API key, save that somewhere safe as well.
 
 Next, you'll install the tools you'll use for development.
 
