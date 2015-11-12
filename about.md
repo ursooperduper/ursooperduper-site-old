@@ -11,7 +11,7 @@ I'm at a turning point in both my career and my life. After a move to the east c
 
 Over the years, I've found I'm happiest when I'm building a prototype or an app. I started my career in tech this way, and it's something I really want to get back into.
 
-So In the fall of 2014, I was accepted to and attended Hacker School (now [Recurse Center](https://recurse.com)), where I spent a blissful ten weeks focused on learning iOS development with Xcode and Swift, and later focused on app development with JavaScript.
+So In the fall of 2014, I was accepted to and attended Hacker School (now [Recurse Center](https://www.recurse.com)), where I spent a blissful ten weeks focused on learning iOS development with Xcode and Swift, and later focused on app development with JavaScript.
 
 I started this blog to document and share my experience at Hacker School, projects I was working on, and tips on workflow productivity (I <3 tmux). However, at the beginning of 2015, everything I was working towards was put on hold when I received a stage 3 colon cancer diagnosis.
 
