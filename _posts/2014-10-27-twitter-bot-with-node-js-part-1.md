@@ -65,9 +65,9 @@ That takes care of the Twitter set up for your bot!
 
 ## Getting a Wordnik API Key
 
-The Twitter bot I created needs to identify nouns in the tweets it grabs and [Wordnik](http://www.wordnik.com) provides an API perfect for this very task.
+The Twitter bot I created needs to identify nouns in the tweets it grabs and Wordnik provides an API perfect for this very task.
 
-To get an API key, you'll first need to [create a Wordnik account](http://www.wordnik.com/signup). After that, you can sign up for an API key by visiting [Wordnik's developer site](http://developer.wordnik.com). If you've used the Wordnik API before, I think you can just use the same API key again because the existing developer sign-up flow limits one API key per Wordnik username. Once you've got the Wordnik API key, save that somewhere safe as well.
+To get an API key, you'll first need to create a Wordnik account. After that, you can sign up for an API key by visiting [Wordnik's developer site](http://developer.wordnik.com). If you've used the Wordnik API before, I think you can just use the same API key again because the existing developer sign-up flow limits one API key per Wordnik username. Once you've got the Wordnik API key, save that somewhere safe as well.
 
 Next, you'll install the tools you'll use for development.
 
