@@ -18,7 +18,7 @@
       try{Typekit.load();}catch(e){}
 
     %script{src: "//code.jquery.com/jquery-1.11.3.min.js"}
-    %script{src: "//code.jquery.com/jquery-migrate-1.2.1.min.js"}  
+    %script{src: "//code.jquery.com/jquery-migrate-1.2.1.min.js"}
 
   %body
 
@@ -30,7 +30,7 @@
           %a.site-title{ href: "{{ site.baseurl }}" } {{ site.title }}
 
           %nav.site-nav
-            %a.menu-icon<
+            %a.menu-icon{ href: "#" }<
               %span.fa.fa-bars
             .trigger
               {% include main-nav.html %}
