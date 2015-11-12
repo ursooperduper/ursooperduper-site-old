@@ -17,7 +17,6 @@ baseurl: "/"
 markdown: kramdown
 kramdown:
     input: GFM
-highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 gems:
