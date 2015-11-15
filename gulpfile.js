@@ -1,80 +1,69 @@
-var gulp         = require('gulp');
-var sourcemaps   = require('gulp-sourcemaps');
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var exec         = require('child_process').exec;
-
+var gulp          = require('gulp');
+var sourcemaps    = require('gulp-sourcemaps');
+var sass          = require('gulp-sass');
+var scsslint      = require('gulp-scss-lint');
+var autoprefixer  = require('gulp-autoprefixer');
+var exec          = require('child_process').exec;
+var haml          = require('gulp-ruby-haml');
 
 // Default task
 gulp.task('default', ['watch']);
 
 // Haml
-gulp.task('haml:index', function (cb) {
-  exec('rake haml:index', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('haml:index', function() {
+  gulp.src('./*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('./'));
 });
 
-gulp.task('haml:tag', function (cb) {
-  exec('rake haml:tag', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('haml:tag', function() {
+  gulp.src('tags/_haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('tags'));
 });
 
-gulp.task('haml:layouts', function (cb) {
-  exec('rake haml:layouts', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('haml:layouts', function() {
+  gulp.src('_layouts/_haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('_layouts'));
 });
 
-gulp.task('haml:includes', function (cb) {
-  exec('rake haml:includes', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('haml:includes', function() {
+  gulp.src('_includes/_haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('_includes'));
 });
 
-gulp.task('haml:work', function (cb) {
-  exec('rake haml:work', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('haml:work', function() {
+  gulp.src('work/_haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('work'));
 });
 
-gulp.task('haml:archive', function (cb) {
-  exec('rake haml:archive', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('haml:archive', function() {
+  gulp.src('archive/_haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('archive'));
 });
-
 
 // Sass
 gulp.task('sass', function () {
   gulp.src('css/scss/*.scss')
+    .pipe(scsslint({
+      'bundleExec': true
+    }))
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('css'));
 });
 
-
 // Autoprefixer
 gulp.task('autoprefixer', function () {
-    return gulp.src('css/main.css')
-        .pipe(sourcemaps.init())
-        .pipe(autoprefixer())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('css'));
+  return gulp.src('css/main.css')
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('css'));
 });
-
 
 // Watcher
 gulp.task('watch', function() {
