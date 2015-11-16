@@ -162,7 +162,6 @@ hr {
   background: $another-grey-color;
 }
 
-
 // ----------------------------->>> LAYOUT <<<---------------------------------
 
 .l-wrapper {
@@ -382,8 +381,9 @@ hr {
 }
 
 .social {
-  margin-left: 0;
-
+  margin: 0;
+  margin-top: -12px;
+  padding-left: 30px;
   list-style: none;
 
   li {
@@ -858,5 +858,10 @@ hr {
 .highlight .lineno {color: $grey-color }
 
 .highlight pre {
-  border: 0
+  border: 0;
+  margin: 0;
+}
+
+figure {
+  border: 1px solid $grey-color-light;
 }
