@@ -21,7 +21,7 @@ It turns out that making your own snippets is really easy in Atom. But before we
 
 In your ```~/.atom``` directory is a file called ```snippets.cson```. It's in this file that you'll write your snippets. Here's an example snippet:
 
-{% highlight yml linenos %}
+{% highlight yaml linenos %}
  '.source.coffee':
    'Console log':
      'prefix': 'log'
@@ -46,7 +46,7 @@ Pretty simple, isn't it?
 
 Now let's work through a simple example. I'm working on a new project involving keyboard shortcuts which are all organized in YAML files. A keyboard shortcut entry looks like this:
 
-{% highlight yml %}
+{% highlight yaml %}
 - shortcut:
   desc:
 {% endhighlight %}
@@ -57,7 +57,7 @@ So with this simple use case, let's build a simple snippet.
 
 First, open the ```snippets.cson``` file which is located in ```~/.atom```. In this file you'll see a short explanation of what snippets are as well as an example. You'll also learn that you can use a snippet to create a snippet! Just enter: ```OPT + SHIFT + S``` then ```snip``` and a snippet template will be inserted into the file.
 
-{% highlight yml %}
+{% highlight yaml %}
 '.source.js':
   'Snippet Name':
     'prefix': 'Snippet Trigger'
@@ -74,13 +74,13 @@ My snippet is for YAML files, so I need to find the Language-YAML package in the
 
 Back in the ```snippets.cson``` file you can specify the correct source and fill out the rest of the snippet:
 
-{% highlight yml %}
+{% highlight yaml %}
 '.source.yaml':
 {% endhighlight %}
 
 On the second and third line, you'll give your snippet a name and a prefix (shortcut). I'll call my snippet 'Cheatsheet Shortcut' and give it a prefix of 'cs'. Before assigning a snippet, it's a good idea to make sure that prefix you want to use isn't already taken by a snippet for that language. To check this, enter the shortcut to access snippets, ```OPT + SHIFT + S``` and look at the list of snippets displayed. The top line displays the assigned prefix for each snippet available for that language. For my cheatsheet snippet, I'll assign the prefix, 'cs'.
 
-{% highlight yml %}
+{% highlight yaml %}
 '.source.yaml':
   'Cheatsheet Shortcut':
   'prefix': 'cs'
@@ -89,7 +89,7 @@ On the second and third line, you'll give your snippet a name and a prefix (shor
 
 Next is the fun part, adding in the code you want to insert when the snippet is accessed. To achieve the format I showed at the beginning of this tutorial, my snippet body would look something like this:
 
-{% highlight yml %}
+{% highlight yaml %}
 - shortcut: \n\tdesc: \n
 {% endhighlight %}
 
@@ -105,7 +105,7 @@ By the way, if you work directly in your snippets.cson file, when you hit save, 
 
 With the body complete, my snippet is complete and looks something like this:
 
-{% highlight yml %}
+{% highlight yaml %}
 '.source.yaml':
   'Cheatsheet Shortcut':
   'prefix': 'cs'
@@ -120,7 +120,7 @@ shortcut: ${1:shortcut}\n\tdesc: ${2:description}\n$0
 
 Also, if you're working on a larger snippet and don't want to fuss with \n and \t for layout, you can create multiline snippet bodies by include three ```"``` in a row before and after the snippet body, like this:
 
-{% highlight yml %}
+{% highlight yaml %}
 'body': """
   - shortcut: $1
     desc: $2
