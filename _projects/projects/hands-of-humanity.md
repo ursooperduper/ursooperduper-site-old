@@ -15,4 +15,4 @@ It was fun building this because I was able to easily duplicate the look of the 
 
 [Visit Hands Against Humanity web page (refresh for a new hand!)](http://hands-of-humanity.herokuapp.com)
 
-[Return to Work Samples](/work.html)
+[Return to Work Samples](/projects)

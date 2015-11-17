@@ -16,4 +16,4 @@ The Trello clone is built in AngularJS and uses basic styling to copy Trello's l
 
 *Code repository and blog post coming soon!*
 
-[Return to Work Samples](/work/index.html)
+[Return to Work Samples](/projects)

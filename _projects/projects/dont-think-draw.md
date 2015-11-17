@@ -13,4 +13,4 @@ Periodically, I would take all the sketches I'd created and convert them to vect
 
 {% include project-gallery.html proj=page.data %}
 
-[Return to Work Samples](/work/index.html)
+[Return to Work Samples](/projects)

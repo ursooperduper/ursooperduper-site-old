@@ -17,4 +17,4 @@ I shared how I solved my image creation issues and more about affine transformat
 
 [Check out the code in this project's Github repository](https://github.com/ursooperduper/creatures-are-friends)
 
-[Return to Work Samples](/projects.html)
+[Return to Work Samples](/projects)

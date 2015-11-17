@@ -11,4 +11,4 @@ I am always on the lookout for generative art project ideas. My love to cycling 
 
 {% include project-gallery.html proj=page.data %}
 
-[Return to Work Samples](/work/index.html)
+[Return to Work Samples](/projects)

@@ -20,4 +20,4 @@ As the app matures, I'd like to add features like the ability to save and share 
 You can learn more about this project from my blog post,
 [Introducing LeWittScript: A conceptualist art + code project](/2014/10/23/introducing-lewittscript.html)
 
-[Return to Work Samples](/work.html)
+[Return to Work Samples](/projects)

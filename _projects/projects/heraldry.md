@@ -17,4 +17,4 @@ As a part of this project, I created all my own SVG artwork and used that to cre
 
 {% include project-gallery.html proj=page.data %}
 
-[Return to Work Samples](/work.html)
+[Return to Work Samples](/projects)

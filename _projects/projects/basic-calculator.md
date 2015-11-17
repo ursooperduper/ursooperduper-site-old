@@ -16,4 +16,4 @@ You can learn more about this project from the [blog post](/2014/09/17/basic-cal
 
 [Check out the code in this project's Github repository](https://github.com/ursooperduper/calculator)
 
-[Return to Work Samples](/projects.html)
+[Return to Work Samples](/projects)

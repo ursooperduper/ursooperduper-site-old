@@ -29,4 +29,4 @@ To learn more about how the bot was created, see my three-part blog series on cr
 
 [Check out the code in this project's Github repository](https://github.com/ursooperduper/picktwobot)
 
-[Return to Work Samples](/work.htm)
+[Return to Work Samples](/projects)
