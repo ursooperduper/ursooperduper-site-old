@@ -1,0 +1,12 @@
+\---
+layout: page
+title: Projects
+\---
+
+.work
+  {% for p in site.projects %}
+  .work-thumb
+    %a{ href: "{{ p.url }}" }
+      %img{ src: "/images/work/thumbs/{{ p.thumb }}", alt: "{{ p.title }}" }
+      {{ p.title }}
+  {% endfor %}

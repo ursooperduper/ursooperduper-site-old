@@ -1,0 +1,14 @@
+---
+layout: page
+title: Projects
+---
+<div class='work'>
+  {% for p in site.projects %}
+  <div class='work-thumb'>
+    <a href='{{ p.url }}'>
+      <img alt='{{ p.title }}' src='/images/work/thumbs/{{ p.thumb }}'>
+      {{ p.title }}
+    </a>
+  </div>
+  {% endfor %}
+</div>

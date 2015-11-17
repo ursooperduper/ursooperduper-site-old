@@ -40,6 +40,12 @@ gulp.task('haml:work', function() {
     .pipe(gulp.dest('work'));
 });
 
+gulp.task('haml:projects', function() {
+  gulp.src('projects/_haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('projects'));
+});
+
 gulp.task('haml:archive', function() {
   gulp.src('archive/_haml/*.haml')
     .pipe(haml())
@@ -67,11 +73,12 @@ gulp.task('autoprefixer', function () {
 
 // Watcher
 gulp.task('watch', function() {
-  gulp.watch('index.haml', ['haml:index']);
+  gulp.watch('./*.haml', ['haml:index']);
   gulp.watch('tags/_haml/*.haml', ['haml:tag']);
   gulp.watch('_includes/_haml/*.haml', ['haml:includes']);
   gulp.watch('_layouts/_haml/*.haml', ['haml:layouts']);
   gulp.watch('work/_haml/*.haml', ['haml:work']);
+  gulp.watch('projects/_haml/*.haml', ['haml:projects']);
   gulp.watch('archive/_haml/*.haml', ['haml:archive']);
   gulp.watch('css/scss/*.scss', ['sass']);
   gulp.watch('css/*.css', ['autoprefixer']);

@@ -4,8 +4,8 @@
 - name: "About"
   url: "/about"
 
-- name: "Work Samples"
-  url: "/work"
+- name: "Projects"
+  url: "/projects"
 
 - name: "Post Archive"
   url: "/archive"
