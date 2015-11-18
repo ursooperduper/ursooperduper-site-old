@@ -126,7 +126,7 @@ You'll notice that I'm using the ```:before``` selector in the example above. Th
 
 In my example, I've created two CSS classes, ```begin``` and ```continue```. The mark up for the original HTML looks like this now:
 
-{% highlight for html %}
+{% highlight html %}
 <h1>Introductory Heading</h1>
 
 <ol class="begin">
