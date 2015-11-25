@@ -9,3 +9,6 @@
 
 - name: "Post Archive"
   url: "/archive"
+
+- name: "Cheatsheets"
+  url: "http://ursooperduper.github.io/cheatsheets"
