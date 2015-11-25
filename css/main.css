@@ -294,7 +294,7 @@ hr {
   font-weight: 900; }
 
 .post-list {
-  width: 70%;
+  width: 65%;
   margin-left: 0;
   padding-right: 20px; }
   @media screen and (max-width: 600px) {
@@ -558,7 +558,7 @@ hr {
   padding-top: 40px; }
 
 .side-bar {
-  width: 30%; }
+  width: 35%; }
   @media screen and (max-width: 600px) {
     .side-bar {
       width: 100%; } }

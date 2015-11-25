@@ -446,7 +446,7 @@ hr {
 }
 
 .post-list {
-  width: 70%;
+  width: 65%;
   margin-left: 0;
   padding-right: $spacing-unit;
 
@@ -796,7 +796,7 @@ hr {
 }
 
 .side-bar {
-  width: 30%;
+  width: 35%;
 
   @include media-query($on-palm) {
     width: 100%;
