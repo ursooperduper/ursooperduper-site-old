@@ -23,7 +23,7 @@ I could use [screen](http://www.gnu.org/software/screen/) to do this, but I hear
 
 ## What is tmux?
 
-[tmux](http://tmux.sourceforge.net/) is a terminal multiplexer.
+[tmux](http://tmux.github.io) is a terminal multiplexer.
 
 ### Great. What's terminal multiplexing?
 
