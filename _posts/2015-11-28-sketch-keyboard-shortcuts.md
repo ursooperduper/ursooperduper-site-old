@@ -13,7 +13,6 @@ tags:
 
 Sketch has a minimal, but well thought out set of keyboard shortcuts. From individual tool selection to general UI control, the shortcuts are easy to learn and let you stay focused on your design, not navigating UI.
 
-
 [You can check out the full Sketch Cheatsheet here.](http://ursooperduper.github.io/cheatsheets/sketch/)
 
 But below are a few timesaving shortcuts to get you started!
