@@ -6,9 +6,10 @@ tags:
 - cheatsheets
 - keyboard shortcuts
 - productivity
+- spotify
 ---
 
-Spotify offers one of the best online music streaming services. A free account let's you collect and listen to all your favorite albums and makes it easy to discover new music with related artists and a multitude of playlists. With a few simple keyboard shortcuts, you can get to great music even faster.
+[Spotify](https://www.spotify.com) offers one of the best online music streaming services. A free account let's you collect and listen to all your favorite albums and makes it easy to discover new music with related artists and a multitude of playlists. With a few simple keyboard shortcuts, you can get to great music even faster.
 
 [You can check out the full Spotify Cheatsheet here.](http://ursooperduper.github.io/cheatsheets/spotify/)
 
