@@ -209,7 +209,6 @@ hr {
 .site-nav {
   margin-right: 0;
   margin-bottom: 0;
-  padding-left: 70px;
   color: #fff;
   font-family: "museo-slab", serif;
   font-size: 1.1em;
@@ -737,5 +736,7 @@ figure {
     color: #099; }
   .highlight .lineno {
     color: #5d5d60; }
+
+/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */

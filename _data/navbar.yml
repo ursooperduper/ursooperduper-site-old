@@ -7,8 +7,11 @@
 - name: "Projects"
   url: "/projects"
 
-- name: "Post Archive"
-  url: "/archive"
-
 - name: "Cheatsheets"
   url: "http://ursooperduper.github.io/cheatsheets"
+
+- name: "Prototypes"
+  url: "http://ursooperduper.github.io/prototypes"
+
+- name: "Post Archive"
+  url: "/archive"
