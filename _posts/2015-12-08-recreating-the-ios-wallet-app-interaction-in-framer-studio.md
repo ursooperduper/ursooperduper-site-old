@@ -6,7 +6,7 @@ tags:
 - prototypes
 - ios
 - framerjs
-- tutorial
+- tutorials
 ---
 
 Apple's iOS Wallet app is useful for quick access to plane and rail tickets, as well as club and gift cards. With it's simple interaction model, it's easy to see what cards are in the wallet and to access them when they're needed. In this post, I'll walk you through creating a prototype of the Wallet app's interaction in [Framer Studio](http://framerjs.com/).

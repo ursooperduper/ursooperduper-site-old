@@ -6,6 +6,7 @@ tags:
 - cheatsheets
 - keyboard shortcuts
 - productivity
+- framerjs
 ---
 
 [Framer Studio](http://framerjs.com) is my favorite prototyping tool. You can take designs you've worked on in Photoshop or Sketch, import them to Framer Studio at the click of a button and then write simple Coffeescript to bring those designs to life.
