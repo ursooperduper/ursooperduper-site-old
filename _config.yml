@@ -19,8 +19,6 @@ kramdown:
     input: GFM
 lsi: false
 excerpt_separator: "\n\n"
-gems:
-- jekyll-gist
 collections:
   projects:
     output: true
