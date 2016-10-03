@@ -1,7 +1,7 @@
 title: "// this might work..."
 email: sarah@sooperduper.com
 name: "Sarah Kuehnle"
-description: "Sarah Kuehnle is a UX Designer, Prototyper, Developer, and productivity enthusiast."
+description: "Sarah Kuehnle is a Product Designer, Prototyper, Developer, and productivity enthusiast."
 url: http://ursooperduper.github.io
 twitter_username: ursooperduper
 github_username: ursooperduper
@@ -23,3 +23,9 @@ collections:
   projects:
     output: true
     permalink: /:path/
+jekyll-crosspost_to_medium:
+  enabled: true
+  cache: .jekyll-crosspost_to_medium
+  status: draft
+  license: all-rights-reserved
+  backdate: true

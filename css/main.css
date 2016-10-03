@@ -342,22 +342,22 @@ hr {
         font-size: 1.8em; } }
   .post-content h2 {
     padding-top: 20px;
-    font-size: 1.6em; }
+    font-size: 1.8em; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 1.6em; } }
+        font-size: 1.8em; } }
   .post-content h3 {
     padding-top: 10px;
-    font-size: 1.2em; }
+    font-size: 1.4em; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
-        font-size: 1.2em; } }
+        font-size: 1.4em; } }
   .post-content h4 {
     padding-top: 10px;
-    font-size: 1.2em; }
+    font-size: 1em; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
-        font-size: 1.2em; } }
+        font-size: 1em; } }
   .post-content a, .post-content a:visited, .post-content a:hover {
     text-decoration: underline; }
 
@@ -426,7 +426,6 @@ hr {
           opacity: 1; }
         .lightbox > ul > li :hover .title {
           -webkit-transform: scale(1);
-              -ms-transform: scale(1);
                   transform: scale(1); }
 
 .image-title {
@@ -451,16 +450,15 @@ hr {
   width: 100%;
   height: 145px;
   -webkit-transition: all .5s;
-          transition: all .5s;
+  transition: all .5s;
   background: rgba(48, 102, 102, 0.75);
   opacity: 0; }
 
 .title {
   -webkit-transform: scale(0);
-      -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transition: all .25s;
-          transition: all .25s;
+  transition: all .25s;
   color: #fff;
   font-family: "museo-slab", serif;
   font-size: 1.4em; }

@@ -522,30 +522,30 @@ hr {
   h2 {
     padding-top: $spacing-unit;
 
-    font-size: 1.6em;
+    font-size: 1.8em;
 
     @include media-query($on-laptop) {
-      font-size: 1.6em;
+      font-size: 1.8em;
     }
   }
 
   h3 {
     padding-top: $spacing-unit-sm;
 
-    font-size: 1.2em;
+    font-size: 1.4em;
 
     @include media-query($on-laptop) {
-      font-size: 1.2em;
+      font-size: 1.4em;
     }
   }
 
   h4 {
     padding-top: $spacing-unit-sm;
 
-    font-size: 1.2em;
+    font-size: 1em;
 
     @include media-query($on-laptop) {
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
 
