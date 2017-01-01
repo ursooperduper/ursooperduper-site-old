@@ -16,7 +16,7 @@ Simply - we need you.
 
 I urge you to keep on creating the amazing things you create. In difficult times, the world needs your imagination, your spirit, and your vision.No matter what you make - make it and share it with people.
 
-It doesn't matter if its a video of your dog chasing a laser, a blog post about how much you love mayonnaise, a sappy love song written about your love of packing tape, a painting of cheese, or an LED blinky light that flashes every time your tweet is exactly 140 characters. Just make it.
+It doesn't matter if it's a video of your dog chasing a laser, a blog post about how much you love mayonnaise, a sappy love song written about your love of packing tape, a painting of cheese, or an LED blinky light that flashes every time your tweet is exactly 140 characters. Just make it.
 
 Now, on a local/personal level, 2016 was pretty good to me. I was declared cancer free, started a new job, and rode my bike almost 2000 miles getting my health and fitness back to a more acceptable place. As this year wraps up, I'm staying focused on the great things that happened and planning creative projects for 2017 - things I want to share with you. Here are a few things I want to work on:
 
